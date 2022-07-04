@@ -1,0 +1,290 @@
+<html>
+  <head>
+      <script src="script.js"></script>
+      <script src="app.js"></script>
+      <link rel="stylesheet" href="style.css">
+      <title>Music Player</title>
+  </head>
+<body onload="real()">
+  <!--  <div> 
+    <button onclick="document.getElementById('player').play()">Play</button> 
+    <button onclick="document.getElementById('player').pause()">Pause</button> 
+    <button onclick="document.getElementById('player').volume += 0.1">Vol +</button> 
+    <button onclick="document.getElementById('player').volume -= 0.1">Vol -</button> 
+  </div> -->
+  <audio controls id="player" onloadedmetadata="mDur()" ontimeupdate="mPlay()">
+    <source src="https://pagalworld.com.se/files/download/id/3198" type="audio/ogg">
+  </audio>
+  <div class="container">
+    <div class="title">
+      TITLE
+    </div>
+    <div class="list">
+      <div class="list-title">Recommended For Today</div>
+      <div class="list-albums">
+        <div class="list-song" id="0" onclick="now_play(id)">
+          <div class="list-song-image animate-fade"></div>
+          <div class="list-song-info">
+            <div class="list-song-title">Song name</div>
+            <div class="list-song-title-info">list info</div>
+          </div>
+        </div>
+        <div class="list-song" id="1" onclick="now_play(id)">
+          <div class="list-song-image animate-fade"></div>
+          <div class="list-song-info">
+            <div class="list-song-title">Song name</div>
+            <div class="list-song-title-info">list info</div>
+          </div>
+        </div>
+        <div class="list-song" id="2" onclick="now_play(id)">
+          <div class="list-song-image animate-fade"></div>
+          <div class="list-song-info">
+            <div class="list-song-title">Song name</div>
+            <div class="list-song-title-info">list info</div>
+          </div>
+        </div>
+        <div class="list-song" id="3" onclick="now_play(id)">
+          <div class="list-song-image animate-fade"></div>
+          <div class="list-song-info">
+            <div class="list-song-title">Song name</div>
+            <div class="list-song-title-info">list info</div>
+          </div>
+        </div>
+        <div class="list-song" id="4" onclick="now_play(id)">
+          <div class="list-song-image animate-fade"></div>
+          <div class="list-song-info">
+            <div class="list-song-title">Song name</div>
+            <div class="list-song-title-info">list info</div>
+          </div>
+        </div>
+        <div class="list-song" id="5" onclick="now_play(id)">
+          <div class="list-song-image animate-fade"></div>
+          <div class="list-song-info">
+            <div class="list-song-title">Song name</div>
+            <div class="list-song-title-info">list info</div>
+          </div>
+        </div>
+        <div class="list-song" id="6" onclick="now_play(id)">
+          <div class="list-song-image animate-fade"></div>
+          <div class="list-song-info">
+            <div class="list-song-title">Song name</div>
+            <div class="list-song-title-info">list info</div>
+          </div>
+        </div>
+        <div class="list-song" id="7" onclick="now_play(id)">
+          <div class="list-song-image animate-fade"></div>
+          <div class="list-song-info">
+            <div class="list-song-title">Song name</div>
+            <div class="list-song-title-info">list info</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="list">
+      <div class="list-title">India's Best</div>
+      <div class="list-albums">
+        <div class="list-song" id="8" onclick="now_play(id)">
+          <div class="list-song-image animate-fade"></div>
+          <div class="list-song-info">
+            <div class="list-song-title">Song name</div>
+            <div class="list-song-title-info">list info</div>
+          </div>
+        </div>
+        <div class="list-song" id="9" onclick="now_play(id)">
+          <div class="list-song-image animate-fade"></div>
+          <div class="list-song-info">
+            <div class="list-song-title">Song name</div>
+            <div class="list-song-title-info">list info</div>
+          </div>
+        </div>
+        <div class="list-song" id="10" onclick="now_play(id)">
+          <div class="list-song-image animate-fade"></div>
+          <div class="list-song-info">
+            <div class="list-song-title">Song name</div>
+            <div class="list-song-title-info">list info</div>
+          </div>
+        </div>
+        <div class="list-song" id="11" onclick="now_play(id)">
+          <div class="list-song-image animate-fade"></div>
+          <div class="list-song-info">
+            <div class="list-song-title">Song name</div>
+            <div class="list-song-title-info">list info</div>
+          </div>
+        </div>
+        <div class="list-song" id="12" onclick="now_play(id)">
+          <div class="list-song-image animate-fade"></div>
+          <div class="list-song-info">
+            <div class="list-song-title">Song name</div>
+            <div class="list-song-title-info">list info</div>
+          </div>
+        </div>
+        <div class="list-song" id="13" onclick="now_play(id)">
+          <div class="list-song-image animate-fade"></div>
+          <div class="list-song-info">
+            <div class="list-song-title">Song name</div>
+            <div class="list-song-title-info">list info</div>
+          </div>
+        </div>
+        <div class="list-song" id="14" onclick="now_play(id)">
+          <div class="list-song-image animate-fade"></div>
+          <div class="list-song-info">
+            <div class="list-song-title">Song name</div>
+            <div class="list-song-title-info">list info</div>
+          </div>
+        </div>
+        <div class="list-song" id="15" onclick="now_play(id)">
+          <div class="list-song-image animate-fade"></div>
+          <div class="list-song-info">
+            <div class="list-song-title">Song name</div>
+            <div class="list-song-title-info">list info</div>
+          </div>
+        </div>
+      </div>
+    </div>    
+    <div class="list">
+      <div class="list-title">Popular Albums</div>
+      <div class="list-albums">
+        <div class="list-song" id="16" onclick="now_play(id)">
+          <div class="list-song-image animate-fade"></div>
+          <div class="list-song-info">
+            <div class="list-song-title">Song name</div>
+            <div class="list-song-title-info">list info</div>
+          </div>
+        </div>
+        <div class="list-song" id="17" onclick="now_play(id)">
+          <div class="list-song-image animate-fade"></div>
+          <div class="list-song-info">
+            <div class="list-song-title">Song name</div>
+            <div class="list-song-title-info">list info</div>
+          </div>
+        </div>
+        <div class="list-song" id="18" onclick="now_play(id)">
+          <div class="list-song-image animate-fade"></div>
+          <div class="list-song-info">
+            <div class="list-song-title">Song name</div>
+            <div class="list-song-title-info">list info</div>
+          </div>
+        </div>
+        <div class="list-song" id="19" onclick="now_play(id)">
+          <div class="list-song-image animate-fade"></div>
+          <div class="list-song-info">
+            <div class="list-song-title">Song name</div>
+            <div class="list-song-title-info">list info</div>
+          </div>
+        </div>
+        <div class="list-song" id="20" onclick="now_play(id)">
+          <div class="list-song-image animate-fade"></div>
+          <div class="list-song-info">
+            <div class="list-song-title">Song name</div>
+            <div class="list-song-title-info">list info</div>
+          </div>
+        </div>
+        <div class="list-song" id="21" onclick="now_play(id)">
+          <div class="list-song-image animate-fade"></div>
+          <div class="list-song-info">
+            <div class="list-song-title">Song name</div>
+            <div class="list-song-title-info">list info</div>
+          </div>
+        </div>
+        <div class="list-song" id="22" onclick="now_play(id)">
+          <div class="list-song-image animate-fade"></div>
+          <div class="list-song-info">
+            <div class="list-song-title">Song name</div>
+            <div class="list-song-title-info">list info</div>
+          </div>
+        </div>
+        <div class="list-song" id="23" onclick="now_play(id)">
+          <div class="list-song-image animate-fade"></div>
+          <div class="list-song-info">
+            <div class="list-song-title">Song name</div>
+            <div class="list-song-title-info">list info</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="panel-all">
+  <div class="player-panel" id="music-panel">
+    <div class="panel-back" id="player-back"></div>
+    <div class="song-info">
+      <div class="current-image" id="now-image" onclick="show()"></div>
+      <div class="current-info">
+        <div class="current-name" id="current">Song Name</div>
+        <div class="current-more" id="current-singer">Song details</div>
+    </div>
+    </div>
+    <input id="dur-panel" class="panel-dur" type="range" name="rng" min="0" step="0.25" value="0" onchange="mSet()">
+    <div class="media-controls">
+      <div class="prev-song" onclick="seekbackward()">
+        <svg class="prev" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M16.5 28.5L3 18L16.5 7.5V28.5Z" fill="black" stroke="black" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M33 28.5L19.5 18L33 7.5V28.5Z" fill="black" stroke="black" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>   
+      </div>
+      <div class="play-song" id="change-play" onclick="play()">
+        <svg class="play" width="65" height="65" viewBox="0 0 65 65" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M18 14L47.1667 32.75L18 51.5V14Z" fill="black" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>        
+      </div>
+      <div class="next-song" onclick="seekforward()">
+        <svg class="next" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M19.5 28.5L33 18L19.5 7.5V28.5Z" fill="black" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M3 28.5L16.5 18L3 7.5V28.5Z" fill="black" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+      </div>
+    </div>
+  </div>
+</div>
+  <div class="full-screen-player" id="full-player">
+    <div class="full-screen-cover" id="full-now-cover"></div>
+    <div class="full-screen-cover-back"></div>
+    <div class="close" onclick="show()">
+      <svg class="close-arrow" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M20.5833 9.20834L13 16.7917L5.41663 9.20834" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+               
+    </div>
+    <div class="full-screen-album" id="full-now-image"></div>
+    <div class="full-screen-info">
+      <div class="full-screen-current-name" id="full-current">Song name</div>
+      <div class="full-screen-current-info" id="full-current-singer">Song info</div>
+    </div>
+    <div class="full-screen-controls">
+      <div class="loop-song-full" id="loop-song-id" onclick="songloop()">
+      <svg class="loop-song" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M25.5 3L31.5 9L25.5 15" stroke="black" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M4.5 16.5V15C4.5 13.4087 5.13214 11.8826 6.25736 10.7574C7.38258 9.63214 8.9087 9 10.5 9H31.5" stroke="black" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M10.5 33L4.5 27L10.5 21" stroke="black" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M31.5 19.5V21C31.5 22.5913 30.8679 24.1174 29.7426 25.2426C28.6174 26.3679 27.0913 27 25.5 27H4.5" stroke="black" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    </div>
+      <div class="prev-song-full" onclick="seekbackward()">
+        <svg class="full-prev" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M16.5 28.5L3 18L16.5 7.5V28.5Z" fill="black" stroke="black" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M33 28.5L19.5 18L33 7.5V28.5Z" fill="black" stroke="black" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>  
+      </div>
+      <div class="play-song-full" id="change-play-full" onclick="play()">
+        <svg class="full-play" width="65" class="play" height="65" viewBox="0 0 65 65" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M18 14L47.1667 32.75L18 51.5V14Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>               
+      </div>
+      <div class="next-song-full" onclick="seekforward()">
+        <svg class="full-next" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M19.5 28.5L33 18L19.5 7.5V28.5Z" fill="black" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M3 28.5L16.5 18L3 7.5V28.5Z" fill="black" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+      </div>
+      <div class="mute-song-full" id="mute-song-id" onclick="songmute()">
+      <svg class="mute-song" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M16.5 7.5L9 13.5H3V22.5H9L16.5 28.5V7.5Z" stroke="black" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M33 13.5L24 22.5" stroke="black" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M24 13.5L33 22.5" stroke="black" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        
+    </div>
+    </div>
+    <input id="dur" type="range" name="rng" min="0" step="0.25" value="0" onchange="mSet()">
+  </div>
+</body>  
+</html>
