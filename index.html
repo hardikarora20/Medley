@@ -1,7 +1,7 @@
 <html>
   <head>
       <script src="script.js"></script>
-      <script src="app.js"></script>
+      <script src="songs.js"></script>
       <link rel="stylesheet" href="style.css">
       <title>Music Player</title>
   </head>
@@ -15,63 +15,212 @@
   <audio controls id="player" onloadedmetadata="mDur()" ontimeupdate="mPlay()">
     <source src="https://pagalworld.com.se/files/download/id/3198" type="audio/ogg">
   </audio>
-  <div class="container">
-    <div class="title">
-      TITLE
+  <div class="nav">
+    <svg onclick="menu()" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M12.22 2H11.78C11.2496 2 10.7409 2.21071 10.3658 2.58579C9.99072 2.96086 9.78 3.46957 9.78 4V4.18C9.77964 4.53073 9.68706 4.87519 9.51154 5.17884C9.33602 5.48248 9.08374 5.73464 8.78 5.91L8.35 6.16C8.04596 6.33554 7.70108 6.42795 7.35 6.42795C6.99893 6.42795 6.65404 6.33554 6.35 6.16L6.2 6.08C5.74107 5.81526 5.19584 5.74344 4.684 5.88031C4.17217 6.01717 3.73555 6.35154 3.47 6.81L3.25 7.19C2.98526 7.64893 2.91345 8.19416 3.05031 8.706C3.18717 9.21783 3.52154 9.65445 3.98 9.92L4.13 10.02C4.43228 10.1945 4.68362 10.4451 4.85905 10.7468C5.03448 11.0486 5.1279 11.391 5.13 11.74V12.25C5.1314 12.6024 5.03965 12.949 4.86405 13.2545C4.68844 13.5601 4.43521 13.8138 4.13 13.99L3.98 14.08C3.52154 14.3456 3.18717 14.7822 3.05031 15.294C2.91345 15.8058 2.98526 16.3511 3.25 16.81L3.47 17.19C3.73555 17.6485 4.17217 17.9828 4.684 18.1197C5.19584 18.2566 5.74107 18.1847 6.2 17.92L6.35 17.84C6.65404 17.6645 6.99893 17.5721 7.35 17.5721C7.70108 17.5721 8.04596 17.6645 8.35 17.84L8.78 18.09C9.08374 18.2654 9.33602 18.5175 9.51154 18.8212C9.68706 19.1248 9.77964 19.4693 9.78 19.82V20C9.78 20.5304 9.99072 21.0391 10.3658 21.4142C10.7409 21.7893 11.2496 22 11.78 22H12.22C12.7504 22 13.2591 21.7893 13.6342 21.4142C14.0093 21.0391 14.22 20.5304 14.22 20V19.82C14.2204 19.4693 14.3129 19.1248 14.4885 18.8212C14.664 18.5175 14.9163 18.2654 15.22 18.09L15.65 17.84C15.954 17.6645 16.2989 17.5721 16.65 17.5721C17.0011 17.5721 17.346 17.6645 17.65 17.84L17.8 17.92C18.2589 18.1847 18.8042 18.2566 19.316 18.1197C19.8278 17.9828 20.2645 17.6485 20.53 17.19L20.75 16.8C21.0147 16.3411 21.0866 15.7958 20.9497 15.284C20.8128 14.7722 20.4785 14.3356 20.02 14.07L19.87 13.99C19.5648 13.8138 19.3116 13.5601 19.136 13.2545C18.9604 12.949 18.8686 12.6024 18.87 12.25V11.75C18.8686 11.3976 18.9604 11.051 19.136 10.7455C19.3116 10.4399 19.5648 10.1862 19.87 10.01L20.02 9.92C20.4785 9.65445 20.8128 9.21783 20.9497 8.706C21.0866 8.19416 21.0147 7.64893 20.75 7.19L20.53 6.81C20.2645 6.35154 19.8278 6.01717 19.316 5.88031C18.8042 5.74344 18.2589 5.81526 17.8 6.08L17.65 6.16C17.346 6.33554 17.0011 6.42795 16.65 6.42795C16.2989 6.42795 15.954 6.33554 15.65 6.16L15.22 5.91C14.9163 5.73464 14.664 5.48248 14.4885 5.17884C14.3129 4.87519 14.2204 4.53073 14.22 4.18V4C14.22 3.46957 14.0093 2.96086 13.6342 2.58579C13.2591 2.21071 12.7504 2 12.22 2V2Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      
+      </div>
+      <div class="menu" id="menu-bar">
+        <div id="theme">Light Theme | Dark Theme
+          <!-- <input type="checkbox" id="light"> -->
+        </div>
+        <div id="user">Username<input type="text" id="username"></div>
+        <div id="save" onclick="updatename()">Save</div>
+      </div>
+  <div class="container" id="page" onclick="removemenu()"> 
+    <!-- <div class="header"> -->
+    <div class="title-back"></div>
+    <div class="title" id="greeting" onclick="egg()">
+      Welcome user
+    </div>
+  <!-- </div> -->
+    <!-- <svg class="svg-title" width="413" height="106" viewBox="0 0 413 106" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M2.61932 15.9091V18.4091H5.11932H31.8921V99V101.5H34.3921H45.6648H48.1648V99V18.4091H74.9375H77.4375V15.9091V5.90906V3.40906H74.9375H5.11932H2.61932V5.90906V15.9091Z" stroke="white" stroke-width="5"/>
+      <path d="M128.631 26.6818H126.131V29.1818V70.4545C126.131 74.4585 125.256 77.5234 123.697 79.8251L123.692 79.8328L123.687 79.8405C122.03 82.3251 120.023 84.1025 117.669 85.2542L117.659 85.259C115.193 86.4784 112.858 87.0454 110.631 87.0454C106.813 87.0454 103.82 85.7778 101.448 83.2827C99.1309 80.8154 97.858 77.4199 97.858 72.8181V29.1818V26.6818H95.358H84.6307H82.1307V29.1818V73.5454C82.1307 79.7382 83.1392 85.0733 85.3002 89.4292L85.3037 89.4362C87.4387 93.7062 90.4307 97.0053 94.2994 99.216L94.3068 99.2202L94.3141 99.2243C98.1257 101.368 102.436 102.409 107.176 102.409C112.84 102.409 117.744 101.087 121.715 98.2652L121.721 98.261L121.727 98.2567C123.375 97.0715 124.845 95.7663 126.131 94.3411V98.9999V101.5H128.631H139.358H141.858V98.9999V29.1818V26.6818H139.358H128.631Z" stroke="white" stroke-width="5"/>
+      <path d="M173.108 101.5H175.608V99V57C175.608 53.2523 176.321 50.2297 177.624 47.8286C178.956 45.3721 180.732 43.5629 182.955 42.3234C185.242 41.0659 187.878 40.4091 190.926 40.4091C195.336 40.4091 198.526 41.7562 200.815 44.2396L200.815 44.2397L200.823 44.2486C203.121 46.7171 204.426 50.3082 204.426 55.3636V99V101.5H206.926H217.653H220.153V99V54.6363C220.153 48.442 219.129 43.1143 216.93 38.7813C214.752 34.4605 211.651 31.1576 207.619 28.9847C203.649 26.8149 199.089 25.7727 194.017 25.7727C188.416 25.7727 183.597 26.9306 179.746 29.4493C178.054 30.542 176.552 31.801 175.244 33.2233V29.1818V26.6818H172.744H162.381H159.881V29.1818V99V101.5H162.381H173.108Z" stroke="white" stroke-width="5"/>
+      <path d="M250.116 98.1259L250.124 98.1307L250.132 98.1355C255.467 101.383 261.738 102.955 268.841 102.955C273.825 102.955 278.393 102.187 282.51 100.607L282.518 100.603L282.526 100.6C286.609 98.9997 290.099 96.7529 292.947 93.838L292.952 93.8329L292.957 93.8277C295.803 90.8819 297.839 87.4506 299.047 83.5592L299.808 81.1055L297.335 80.4112L286.971 77.5021L284.761 76.8816L283.955 79.0313C283.161 81.1472 282.064 82.8548 280.689 84.2079C279.296 85.5473 277.628 86.5731 275.649 87.2774C273.683 87.9578 271.423 88.3182 268.841 88.3182C264.882 88.3182 261.523 87.4642 258.684 85.8361C255.865 84.1897 253.63 81.794 251.984 78.56C250.829 76.226 250.059 73.4605 249.72 70.2272H297.75H300.25V67.7272V63.1818C300.25 56.4626 299.362 50.6502 297.49 45.8234C295.654 41.0891 293.145 37.1732 289.909 34.1715C286.76 31.22 283.231 29.0587 279.331 27.7253C275.534 26.4269 271.67 25.7727 267.75 25.7727C261.02 25.7727 255.018 27.4292 249.838 30.8156C244.726 34.1469 240.768 38.7844 237.951 44.6442L237.949 44.6495C235.155 50.4967 233.795 57.1795 233.795 64.6363C233.795 72.0923 235.155 78.7495 237.953 84.5421L237.957 84.5497L237.961 84.5573C240.794 90.3211 244.849 94.8666 250.116 98.1259ZM284.219 55.9545H249.897C250.259 54.0174 250.881 52.1624 251.763 50.3827C253.239 47.404 255.329 45.0087 258.06 43.1616L258.064 43.1586C260.718 41.3553 263.91 40.4091 267.75 40.4091C271.232 40.4091 274.12 41.2069 276.512 42.7084L276.522 42.7146C279 44.2535 280.898 46.3412 282.241 49.0271L282.246 49.0358L282.25 49.0445C283.295 51.0944 283.96 53.3892 284.219 55.9545Z" stroke="white" stroke-width="5"/>
+      <path d="M332.108 5.90906V3.40906H329.608H318.335H315.835V5.90906V99V101.5H318.335H329.608H332.108V99V5.90906Z" stroke="white" stroke-width="5"/>
+      <path d="M363.108 101.5H365.608V99V57C365.608 53.2523 366.321 50.2297 367.624 47.8286C368.956 45.3721 370.732 43.5629 372.955 42.3234C375.242 41.0659 377.878 40.4091 380.926 40.4091C385.336 40.4091 388.526 41.7562 390.815 44.2396L390.815 44.2397L390.823 44.2486C393.121 46.7171 394.426 50.3082 394.426 55.3636V99V101.5H396.926H407.653H410.153V99V54.6363C410.153 48.442 409.129 43.1143 406.93 38.7813C404.752 34.4605 401.651 31.1576 397.619 28.9847C393.649 26.8149 389.089 25.7727 384.017 25.7727C378.416 25.7727 373.597 26.9306 369.746 29.4493C368.054 30.542 366.552 31.801 365.244 33.2233V29.1818V26.6818H362.744H352.381H349.881V29.1818V99V101.5H352.381H363.108Z" stroke="white" stroke-width="5"/>
+      </svg>
+      
+       -->
+    <div class="list" id="last-played">
+      <div class="list-title">Jump Back In</div>
+      <div class="list-albums">
+        <div class="list-song" onclick="now_play(id)">
+          <div class="list-song-image animate-fade"></div>
+          <div class="list-song-info">
+            <div class="list-song-title">Jump in</div>
+            <div class="list-song-title-info">list info</div>
+          </div>
+        </div>
+        <div class="list-song" onclick="now_play(id)">
+          <div class="list-song-image animate-fade"></div>
+          <div class="list-song-info">
+            <div class="list-song-title">Jump in</div>
+            <div class="list-song-title-info">list info</div>
+          </div>
+        </div>
+        <div class="list-song" onclick="now_play(id)">
+          <div class="list-song-image animate-fade"></div>
+          <div class="list-song-info">
+            <div class="list-song-title">Jump in</div>
+            <div class="list-song-title-info">list info</div>
+          </div>
+        </div>
+        <div class="list-song" onclick="now_play(id)">
+          <div class="list-song-image animate-fade"></div>
+          <div class="list-song-info">
+            <div class="list-song-title">Jump in</div>
+            <div class="list-song-title-info">list info</div>
+          </div>
+        </div>
+        <div class="list-song" onclick="now_play(id)">
+          <div class="list-song-image animate-fade"></div>
+          <div class="list-song-info">
+            <div class="list-song-title">Jump in</div>
+            <div class="list-song-title-info">list info</div>
+          </div>
+        </div>
+        <div class="list-song" onclick="now_play(id)">
+          <div class="list-song-image animate-fade"></div>
+          <div class="list-song-info">
+            <div class="list-song-title">Jump in</div>
+            <div class="list-song-title-info">list info</div>
+          </div>
+        </div>
+        <div class="list-song" onclick="now_play(id)">
+          <div class="list-song-image animate-fade"></div>
+          <div class="list-song-info">
+            <div class="list-song-title">Jump in</div>
+            <div class="list-song-title-info">list info</div>
+          </div>
+        </div>
+        <div class="list-song" onclick="now_play(id)">
+          <div class="list-song-image animate-fade"></div>
+          <div class="list-song-info">
+            <div class="list-song-title">Jump in</div>
+            <div class="list-song-title-info">list info</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="list" id="recommend">
+      <div class="list-title">Recommended For You</div>
+      <div class="list-albums">
+        <div class="list-song" onclick="now_play(id)">
+          <div class="list-song-image animate-fade"></div>
+          <div class="list-song-info">
+            <div class="list-song-title">Recommended</div>
+            <div class="list-song-title-info">list info</div>
+          </div>
+        </div>
+        <div class="list-song" onclick="now_play(id)">
+          <div class="list-song-image animate-fade"></div>
+          <div class="list-song-info">
+            <div class="list-song-title">Recommended</div>
+            <div class="list-song-title-info">list info</div>
+          </div>
+        </div>
+        <div class="list-song" onclick="now_play(id)">
+          <div class="list-song-image animate-fade"></div>
+          <div class="list-song-info">
+            <div class="list-song-title">Recommended</div>
+            <div class="list-song-title-info">list info</div>
+          </div>
+        </div>
+        <div class="list-song" onclick="now_play(id)">
+          <div class="list-song-image animate-fade"></div>
+          <div class="list-song-info">
+            <div class="list-song-title">Recommended</div>
+            <div class="list-song-title-info">list info</div>
+          </div>
+        </div>
+        <div class="list-song" onclick="now_play(id)">
+          <div class="list-song-image animate-fade"></div>
+          <div class="list-song-info">
+            <div class="list-song-title">Recommended</div>
+            <div class="list-song-title-info">list info</div>
+          </div>
+        </div>
+        <div class="list-song" onclick="now_play(id)">
+          <div class="list-song-image animate-fade"></div>
+          <div class="list-song-info">
+            <div class="list-song-title">Recommended</div>
+            <div class="list-song-title-info">list info</div>
+          </div>
+        </div>
+        <div class="list-song" onclick="now_play(id)">
+          <div class="list-song-image animate-fade"></div>
+          <div class="list-song-info">
+            <div class="list-song-title">Recommended</div>
+            <div class="list-song-title-info">list info</div>
+          </div>
+        </div>
+        <div class="list-song" onclick="now_play(id)">
+          <div class="list-song-image animate-fade"></div>
+          <div class="list-song-info">
+            <div class="list-song-title">Recommended</div>
+            <div class="list-song-title-info">list info</div>
+          </div>
+        </div>
+      </div>
     </div>
     <div class="list">
-      <div class="list-title">Recommended For Today</div>
+      <div class="list-title" id="pop">Pop Shots</div>
       <div class="list-albums">
-        <div class="list-song" id="0" onclick="now_play(id)">
+        <div class="list-song" onclick="now_play(id)">
           <div class="list-song-image animate-fade"></div>
           <div class="list-song-info">
             <div class="list-song-title">Song name</div>
             <div class="list-song-title-info">list info</div>
           </div>
         </div>
-        <div class="list-song" id="1" onclick="now_play(id)">
+        <div class="list-song" onclick="now_play(id)">
           <div class="list-song-image animate-fade"></div>
           <div class="list-song-info">
             <div class="list-song-title">Song name</div>
             <div class="list-song-title-info">list info</div>
           </div>
         </div>
-        <div class="list-song" id="2" onclick="now_play(id)">
+        <div class="list-song" onclick="now_play(id)">
           <div class="list-song-image animate-fade"></div>
           <div class="list-song-info">
             <div class="list-song-title">Song name</div>
             <div class="list-song-title-info">list info</div>
           </div>
         </div>
-        <div class="list-song" id="3" onclick="now_play(id)">
+        <div class="list-song" onclick="now_play(id)">
           <div class="list-song-image animate-fade"></div>
           <div class="list-song-info">
             <div class="list-song-title">Song name</div>
             <div class="list-song-title-info">list info</div>
           </div>
         </div>
-        <div class="list-song" id="4" onclick="now_play(id)">
+        <div class="list-song" onclick="now_play(id)">
           <div class="list-song-image animate-fade"></div>
           <div class="list-song-info">
             <div class="list-song-title">Song name</div>
             <div class="list-song-title-info">list info</div>
           </div>
         </div>
-        <div class="list-song" id="5" onclick="now_play(id)">
+        <div class="list-song" onclick="now_play(id)">
           <div class="list-song-image animate-fade"></div>
           <div class="list-song-info">
             <div class="list-song-title">Song name</div>
             <div class="list-song-title-info">list info</div>
           </div>
         </div>
-        <div class="list-song" id="6" onclick="now_play(id)">
+        <div class="list-song" onclick="now_play(id)">
           <div class="list-song-image animate-fade"></div>
           <div class="list-song-info">
             <div class="list-song-title">Song name</div>
             <div class="list-song-title-info">list info</div>
           </div>
         </div>
-        <div class="list-song" id="7" onclick="now_play(id)">
+        <div class="list-song" onclick="now_play(id)">
           <div class="list-song-image animate-fade"></div>
           <div class="list-song-info">
             <div class="list-song-title">Song name</div>
@@ -80,59 +229,66 @@
         </div>
       </div>
     </div>
-    <div class="list">
+    <div class="list" id="bolly">
       <div class="list-title">India's Best</div>
       <div class="list-albums">
-        <div class="list-song" id="8" onclick="now_play(id)">
+        <div class="list-song" onclick="now_play(id)">
           <div class="list-song-image animate-fade"></div>
           <div class="list-song-info">
             <div class="list-song-title">Song name</div>
             <div class="list-song-title-info">list info</div>
           </div>
         </div>
-        <div class="list-song" id="9" onclick="now_play(id)">
+        <div class="list-song" onclick="now_play(id)">
           <div class="list-song-image animate-fade"></div>
           <div class="list-song-info">
             <div class="list-song-title">Song name</div>
             <div class="list-song-title-info">list info</div>
           </div>
         </div>
-        <div class="list-song" id="10" onclick="now_play(id)">
+        <div class="list-song" onclick="now_play(id)">
           <div class="list-song-image animate-fade"></div>
           <div class="list-song-info">
             <div class="list-song-title">Song name</div>
             <div class="list-song-title-info">list info</div>
           </div>
         </div>
-        <div class="list-song" id="11" onclick="now_play(id)">
+        <div class="list-song" onclick="now_play(id)">
           <div class="list-song-image animate-fade"></div>
           <div class="list-song-info">
             <div class="list-song-title">Song name</div>
             <div class="list-song-title-info">list info</div>
           </div>
         </div>
-        <div class="list-song" id="12" onclick="now_play(id)">
+        <div class="list-song" onclick="now_play(id)">
           <div class="list-song-image animate-fade"></div>
           <div class="list-song-info">
             <div class="list-song-title">Song name</div>
             <div class="list-song-title-info">list info</div>
           </div>
         </div>
-        <div class="list-song" id="13" onclick="now_play(id)">
+        <div class="list-song" onclick="now_play(id)">
           <div class="list-song-image animate-fade"></div>
           <div class="list-song-info">
             <div class="list-song-title">Song name</div>
             <div class="list-song-title-info">list info</div>
           </div>
         </div>
-        <div class="list-song" id="14" onclick="now_play(id)">
+        <div class="list-song" onclick="now_play(id)">
           <div class="list-song-image animate-fade"></div>
           <div class="list-song-info">
             <div class="list-song-title">Song name</div>
             <div class="list-song-title-info">list info</div>
           </div>
         </div>
-        <div class="list-song" id="15" onclick="now_play(id)">
+        <div class="list-song" onclick="now_play(id)">
+          <div class="list-song-image animate-fade"></div>
+          <div class="list-song-info">
+            <div class="list-song-title">Song name</div>
+            <div class="list-song-title-info">list info</div>
+          </div>
+        </div>
+        <div class="list-song" onclick="now_play(id)">
           <div class="list-song-image animate-fade"></div>
           <div class="list-song-info">
             <div class="list-song-title">Song name</div>
@@ -141,7 +297,7 @@
         </div>
       </div>
     </div>    
-    <div class="list">
+    <div class="list" id="indie">
       <div class="list-title">Popular Albums</div>
       <div class="list-albums">
         <div class="list-song" id="16" onclick="now_play(id)">
@@ -201,6 +357,128 @@
           </div>
         </div>
       </div>
+    </div>    
+    <div class="list" id="popular">
+      <div class="list-title">Indie India</div>
+      <div class="list-albums">
+        <div class="list-song" onclick="now_play(id)">
+          <div class="list-song-image animate-fade"></div>
+          <div class="list-song-info">
+            <div class="list-song-title">Song name</div>
+            <div class="list-song-title-info">list info</div>
+          </div>
+        </div>
+        <div class="list-song" onclick="now_play(id)">
+          <div class="list-song-image animate-fade"></div>
+          <div class="list-song-info">
+            <div class="list-song-title">Song name</div>
+            <div class="list-song-title-info">list info</div>
+          </div>
+        </div>
+        <div class="list-song" onclick="now_play(id)">
+          <div class="list-song-image animate-fade"></div>
+          <div class="list-song-info">
+            <div class="list-song-title">Song name</div>
+            <div class="list-song-title-info">list info</div>
+          </div>
+        </div>
+        <div class="list-song" onclick="now_play(id)">
+          <div class="list-song-image animate-fade"></div>
+          <div class="list-song-info">
+            <div class="list-song-title">Song name</div>
+            <div class="list-song-title-info">list info</div>
+          </div>
+        </div>
+        <div class="list-song" onclick="now_play(id)">
+          <div class="list-song-image animate-fade"></div>
+          <div class="list-song-info">
+            <div class="list-song-title">Song name</div>
+            <div class="list-song-title-info">list info</div>
+          </div>
+        </div>
+        <div class="list-song" onclick="now_play(id)">
+          <div class="list-song-image animate-fade"></div>
+          <div class="list-song-info">
+            <div class="list-song-title">Song name</div>
+            <div class="list-song-title-info">list info</div>
+          </div>
+        </div>
+        <div class="list-song" onclick="now_play(id)">
+          <div class="list-song-image animate-fade"></div>
+          <div class="list-song-info">
+            <div class="list-song-title">Song name</div>
+            <div class="list-song-title-info">list info</div>
+          </div>
+        </div>
+        <div class="list-song" onclick="now_play(id)">
+          <div class="list-song-image animate-fade"></div>
+          <div class="list-song-info">
+            <div class="list-song-title">Song name</div>
+            <div class="list-song-title-info">list info</div>
+          </div>
+        </div>
+      </div>
+    </div> 
+    <div class="list">
+      <div class="list-title">Purely Prema</div>
+      <div class="list-albums">
+        <div class="list-song" onclick="now_play(id)">
+          <div class="list-song-image animate-fade"></div>
+          <div class="list-song-info">
+            <div class="list-song-title">Song name</div>
+            <div class="list-song-title-info">list info</div>
+          </div>
+        </div>
+        <div class="list-song" onclick="now_play(id)">
+          <div class="list-song-image animate-fade"></div>
+          <div class="list-song-info">
+            <div class="list-song-title">Song name</div>
+            <div class="list-song-title-info">list info</div>
+          </div>
+        </div>
+        <div class="list-song" onclick="now_play(id)">
+          <div class="list-song-image animate-fade"></div>
+          <div class="list-song-info">
+            <div class="list-song-title">Song name</div>
+            <div class="list-song-title-info">list info</div>
+          </div>
+        </div>
+        <div class="list-song" onclick="now_play(id)">
+          <div class="list-song-image animate-fade"></div>
+          <div class="list-song-info">
+            <div class="list-song-title">Song name</div>
+            <div class="list-song-title-info">list info</div>
+          </div>
+        </div>
+        <div class="list-song" onclick="now_play(id)">
+          <div class="list-song-image animate-fade"></div>
+          <div class="list-song-info">
+            <div class="list-song-title">Song name</div>
+            <div class="list-song-title-info">list info</div>
+          </div>
+        </div>
+        <div class="list-song" onclick="now_play(id)">
+          <div class="list-song-image animate-fade"></div>
+          <div class="list-song-info">
+            <div class="list-song-title">Song name</div>
+            <div class="list-song-title-info">list info</div>
+          </div>
+        </div>
+        <div class="list-song" onclick="now_play(id)">
+          <div class="list-song-image animate-fade"></div>
+          <div class="list-song-info">
+            <div class="list-song-title">Song name</div>
+            <div class="list-song-title-info">list info</div>
+          </div>
+        </div>
+        <div class="list-song" onclick="now_play(id)">
+          <div class="list-song-image animate-fade"></div>
+          <div class="list-song-info">
+            <div class="list-song-title">Song name</div>
+            <div class="list-song-title-info">list info</div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
   <div class="panel-all">
@@ -235,6 +513,7 @@
     </div>
   </div>
 </div>
+<div class="full-player-black" id="full-black"></div>
   <div class="full-screen-player" id="full-player">
     <div class="full-screen-cover" id="full-now-cover"></div>
     <div class="full-screen-cover-back"></div>
