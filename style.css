@@ -294,7 +294,7 @@ audio{
 }
 .black-back-start{
     background-color: #000000;
-    /* z-index: 0; */
+    z-index: 12;
     opacity: 1;
 }
 .svg-head{
