@@ -292,6 +292,11 @@ audio{
     border-radius: 2rem 2rem 2rem 2rem;
     /* transform: translateX(-100%) scale(0%); */
 }
+.black-back-start{
+    background-color: #000000;
+    /* z-index: 0; */
+    opacity: 1;
+}
 .svg-head{
     height: 5rem;
     margin-block: 2rem;

@@ -189,6 +189,7 @@ function welcome(){
         document.getElementById("welcome2").style.display="none";
     }
     else{
+        document.getElementById("back-black").classList.remove("black-back-start");
         document.getElementsByTagName("body")[0].classList.add("disable-scroll");
     }
     real();
@@ -203,6 +204,8 @@ function reset(){
 }
 function real(){
     console.log(document.getElementsByTagName("div").length);
+    
+    document.getElementById("back-black").classList.remove("black-back-start");
     // welcome();
     getname();
     setid();
