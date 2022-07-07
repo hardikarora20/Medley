@@ -194,6 +194,8 @@ function welcome(){
         document.getElementById("page").style.display="none";
         document.getElementById("back-black").classList.remove("black-back-start");
         document.getElementById("music-panel").style.display="none";
+        document.getElementById("menu-bar").style.display="none";
+        document.getElementById("suggest-id").style.display="none";
         document.getElementById("full-player").style.display="none";
         document.getElementById("title-logo").style.display="none";
         document.getElementsByTagName("body")[0].classList.add("disable-scroll");
@@ -217,6 +219,8 @@ function real(){
     document.getElementById("music-panel").style.display="flex";
     document.getElementById("full-player").style.display="flex";
     document.getElementById("title-logo").style.display="flex";
+    document.getElementById("suggest-id").style.display="flex";
+    document.getElementById("menu-bar").style.display="flex";
     document.getElementsByTagName("body")[0].classList.remove("disable-scroll");
     // welcome();
     getname();
