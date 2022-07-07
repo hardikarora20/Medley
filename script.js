@@ -182,6 +182,8 @@ function removemenu(){
 
 function welcome(){
     if(localStorage.getItem("welcome")=="disable"){
+        console.log("function welcome true");
+        welcomedone=1;
         document.getElementById("explore-arrow").style.display="none";
         document.getElementById("welcome").style.zIndex="-100";
         document.getElementById("welcome").style.display="none";
@@ -207,8 +209,9 @@ function reset(){
     }, 1000);
 }
 function real(){
+    if(welcomedone==1){
     console.log(document.getElementsByTagName("div").length);
-    
+    console.log("in loop");
     document.getElementById("page").style.display="flex";
     document.getElementById("back-black").classList.remove("black-back-start");
     document.getElementById("music-panel").style.display="flex";
@@ -236,6 +239,10 @@ function real(){
             index++;
         }
     }
+}
+else{
+    console.log("not in loop");
+}
 }
 var intervalId = window.setInterval(function(){
 
@@ -328,9 +335,12 @@ function updateVar(){
 //     navigator.mediaSession.setActionHandler('nexttrack', function() {});
 
 // }
+var welcomedone=0;
 function pageLeft(){
     document.getElementById("welcome").classList.add("move-left");
     nextgallery();
+    welcomedone=1;
+    real();
 }
 
 function pageLeft2(){
