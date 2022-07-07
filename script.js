@@ -147,7 +147,7 @@ function nextgallery(){
                 if(i==7){
                     i=4;
                 }
-                document.getElementById("gallery-img").style.backgroundImage="url(images/"+i+".png)";
+                document.getElementById("gallery-img").style.backgroundImage="url(images/"+i+".webp)";
                 i++;
             
         }, 4000);
@@ -160,7 +160,7 @@ function nextgallery(){
                 if(i==4){
                     i=1;
                 }
-                document.getElementById("gallery-img").style.backgroundImage="url(images/"+i+".png)";
+                document.getElementById("gallery-img").style.backgroundImage="url(images/"+i+".webp)";
                 i++;
             
         }, 4000);
