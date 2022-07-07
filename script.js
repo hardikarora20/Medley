@@ -191,6 +191,9 @@ function welcome(){
     else{
         document.getElementById("page").style.display="none";
         document.getElementById("back-black").classList.remove("black-back-start");
+        document.getElementById("music-panel").style.display="none";
+        document.getElementById("full-player").style.display="none";
+        document.getElementById("title-logo").style.display="none";
         document.getElementsByTagName("body")[0].classList.add("disable-scroll");
     }
     real();
@@ -208,6 +211,10 @@ function real(){
     
     document.getElementById("page").style.display="flex";
     document.getElementById("back-black").classList.remove("black-back-start");
+    document.getElementById("music-panel").style.display="flex";
+    document.getElementById("full-player").style.display="flex";
+    document.getElementById("title-logo").style.display="flex";
+    document.getElementsByTagName("body")[0].classList.remove("disable-scroll");
     // welcome();
     getname();
     setid();
