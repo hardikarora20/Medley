@@ -1,6 +1,19 @@
 
 var t=1;
-var maxNo=40;
+var maxNo=45;
+
+document.addEventListener("DOMContentLoaded", () => {
+    welcome();
+  });
+window.onload = function() {
+    welcome();
+};
+if(history.scrollRestoration){
+history.scrollRestoration="manual";}
+else{window.onbeforeunload=function(){
+    scrollTo(0,0);
+};
+}
 // function real(){
 //     for(var i=6,j=33,k=60;i<28,j<55,k<83;i=i+3,j=j+3,k=k+3){
 //         document.getElementsByTagName("div")[j].style.animationDelay=""+j+t+"ms";
@@ -34,7 +47,7 @@ function generateUniqueRandom(maxNr) {
 function local(){
     var k=1;
     var local=0
-    for(var i=0;i<50;i++){
+    for(var i=0;i<100;i++){
         console.log(document.getElementsByTagName("div")[i].innerHTML=='Jump in');
         if((document.getElementsByTagName("div")[i].innerHTML=='Jump in')){
             local=parseInt(localStorage.getItem("last"+k+""));
@@ -55,7 +68,7 @@ function local(){
 function recommend(){
     var k=1;
     var local=0
-    for(var i=50;i<100;i++){
+    for(var i=50;i<150;i++){
         if((document.getElementsByTagName("div")[i].innerHTML=='Recommended')){
             local=generateUniqueRandom(maxNo);
             document.getElementsByTagName("div")[i+1].innerText=data[local].singer;
@@ -88,7 +101,7 @@ function egg(){
 function setid(){
     console.log("setting id");
     var newid=0;
-    for(var i=0;i<334;i++){
+    for(var i=0;i<379;i++){
     if(document.getElementsByTagName("div")[i].innerText=='Song Name'){
         document.getElementsByTagName("div")[i-3].setAttribute("id",parseInt(newid));    
         newid++;
@@ -96,27 +109,101 @@ function setid(){
     }
 }
 function menu(){
-    console.log("menu() called")
+    console.log("menu() called");
     document.getElementById("menu-bar").classList.toggle("menuShow");
+    document.getElementById("menudark").classList.toggle("menu-dark-back");
+        // let text;
+        // let person = prompt("What should we call you?\n(Just to improve user experience)", "");
+        // if (person == null || person == "") {
+            
+        // } else {
+        //     var username=" "+person;
+        //     document.getElementById("greeting").innerText="Welcome";
+        //     document.getElementById("greeting").innerText+=username+",";
+        //     localStorage.setItem("username",person);
+        // }
 }
-function removemenu(){
-    document.getElementById("menu-bar").classList.remove("menuShow");
-}
+
 function updatename(){
+    removemenu();
     var username=" "+document.getElementById("username").value;
     document.getElementById("greeting").innerText="Welcome";
     document.getElementById("greeting").innerText+=username+",";
     localStorage.setItem("username",username);
+    
 }
+
+function sendMail(){
+    var songs=document.getElementsByTagName("input")[3].value;
+    window.location.href='mailto:hardik.20.a@gmail.com?subject=Medley Playlist'+"&body=Songs/Artist/Playlist: "+songs;
+}
+
+function nextgallery(){
+    if(window.innerHeight > window.innerWidth){
+        console.log("port");
+        var i=4;
+        setInterval(function () 
+        {
+                if(i==7){
+                    i=4;
+                }
+                document.getElementById("gallery-img").style.backgroundImage="url(images/"+i+".png)";
+                i++;
+            
+        }, 4000);
+    }
+    else{
+        console.log("landscape");
+        var i=1;
+        setInterval(function () 
+        {
+                if(i==4){
+                    i=1;
+                }
+                document.getElementById("gallery-img").style.backgroundImage="url(images/"+i+".png)";
+                i++;
+            
+        }, 4000);
+    }
+}
+
 function getname(){
     if(localStorage.getItem("username")!=null){
     document.getElementById("greeting").innerText="Welcome back";
     var username=localStorage.getItem("username");
-    document.getElementById("greeting").innerText+=username+",";
+    document.getElementById("greeting").innerText+=" "+username+",";
 }
+}
+
+function removemenu(){
+    document.getElementById("menu-bar").classList.remove("menuShow");    
+    document.getElementById("menudark").classList.remove("menu-dark-back");    
+}
+
+function welcome(){
+    if(localStorage.getItem("welcome")=="disable"){
+        document.getElementById("explore-arrow").style.display="none";
+        document.getElementById("welcome").style.zIndex="-100";
+        document.getElementById("welcome").style.display="none";
+        document.getElementById("welcome2").style.zIndex="-100";
+        document.getElementById("welcome2").style.display="none";
+    }
+    else{
+        document.getElementsByTagName("body")[0].classList.add("disable-scroll");
+    }
+    real();
+}
+function reset(){
+    document.getElementById("reset").innerHTML="Reset successful";
+    localStorage.clear();
+    setInterval(function () 
+    {
+        window.location.reload();
+    }, 1000);
 }
 function real(){
     console.log(document.getElementsByTagName("div").length);
+    // welcome();
     getname();
     setid();
     localcheck();
@@ -125,10 +212,11 @@ function real(){
     console.log(localStorage.getItem("last"+k+""));
     }
     var index=0;
-    for(var i=0,j=2;i<334;i++,j=j+2){
+    for(var i=0,j=2;i<379;i++,j=j+2){
         document.getElementsByTagName("div")[i].style.animationDelay=""+j+t+"ms";
-        // t=t-0.1;
-        if((document.getElementsByTagName("div")[i].innerText=='Song Name')&&(index<41)){
+        // t=t-0
+        .1;
+        if((document.getElementsByTagName("div")[i].innerText=='Song Name')&&(index<46)){
             document.getElementsByTagName("div")[i+1].innerText=data[index].singer;
             document.getElementsByTagName("div")[i].innerText=data[index].name;    
             document.getElementsByTagName("div")[i-2].style.backgroundImage='url('+data[index].image+')';
@@ -175,7 +263,7 @@ function now_play(id){
     document.title=data[id].name+' - '+data[id].singer;
     if(once==0){
         document.getElementById("music-panel").classList.toggle("visible");
-        document.getElementById("page").classList.toggle("padding");
+        document.getElementById("suggestion-box").classList.toggle("padding");
         once++;
     }
     // document.getElementById("seek-audio").max=document.getElementById("player").duration;
@@ -190,6 +278,7 @@ function now_play(id){
     document.getElementById("full-current-singer").innerText=data[id].singer;
     document.getElementById("player-back").style.backgroundImage='url('+data[id].image+')';
     document.getElementById("full-now-image").style.backgroundImage='url('+data[id].image+')';
+    document.getElementById("title").style.backgroundImage='url('+data[id].image+')';
     document.getElementById("full-now-cover").style.backgroundImage='url('+data[id].image+')';
     document.getElementsByTagName("audio")[0].setAttribute("src",data[id].link);
     document.getElementsByTagName("audio")[0].play();
@@ -227,7 +316,20 @@ function updateVar(){
 //     navigator.mediaSession.setActionHandler('nexttrack', function() {});
 
 // }
+function pageLeft(){
+    document.getElementById("welcome").classList.add("move-left");
+    nextgallery();
+}
+
+function pageLeft2(){
+    document.getElementById("welcome2").classList.add("move-left2");
+    real();
+    localStorage.setItem("welcome","disable");
+    document.getElementsByTagName("body")[0].classList.remove("disable-scroll");
+}
+
 function show(){
+    // document.body.requestFullscreen();
     document.getElementById("full-player").classList.toggle("visible");
     document.getElementById("full-black").classList.toggle("visible");
     // if(document.getElementById("full-player").classList.contains("visible")){

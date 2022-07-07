@@ -31,6 +31,14 @@ var data=[{
     "image"  : "https://i.scdn.co/image/ab67616d0000b2738863bc11d2aa12b54f5aeb36" 
 },
 {
+    "name"   : "Left and Right (Feat. Jung Kook of BTS)",
+    //"id"     : "4",
+    "singer" : "Charlie Puth, Jung Kook, BTS" ,
+    "type"   : "pop" ,
+    "link"   : "https://snoidcdnems05.cdnsrv.jio.com/jiosaavn.cdn.jio.com/752/21d072d92cd5d67a2f899796bef619ca_320.mp4" ,
+    "image"  : "https://i.scdn.co/image/ab67616d0000b2731c069c836dc6cd5b34c310fe" 
+},
+{
     "name"   : "Night Changes",
     //"id"     : "5",
     "singer" : "One Direction" ,
@@ -104,6 +112,14 @@ var data=[{
     "link"   : "https://snoidcdnems06.cdnsrv.jio.com/jiosaavn.cdn.jio.com/995/719fd938e749f26dc991a0e84454fafc_320.mp4" ,
     "image"  : "https://i.scdn.co/image/ab67616d0000b273dae669e0bc817fd2d2235fa6" 
 },
+// {
+//     "name"   : "Sach Keh Raha Hai Deewana",
+//     //"id"     : "6",
+//     "singer" : "KK" ,
+//     "type"   : "bolly" ,
+//     "link"   : "https://sdlhivkecdnems04.cdnsrv.jio.com/jiosaavn.cdn.jio.com/724/b985f30ff093c948d4d38a4c75bef1ef_320.mp4" ,
+//     "image"  : "https://i.scdn.co/image/ab67616d0000b273aedf6f748f73e59cf25bcf25" 
+// },
 {
     "name"   : "Mileya Mileya",
     //"id"     : "6",
@@ -137,20 +153,20 @@ var data=[{
     "image"  : "https://i.scdn.co/image/ab67616d0000b27367ba10f66efcbe557307d57b" 
 },
 {
+    "name"   : "Red (Taylor's Version)",
+    //"id"     : "5",
+    "singer" : "Taylor Swift" ,
+    "type"   : "popular" ,
+    "link"   : "https://sdlhivkecdnems04.cdnsrv.jio.com/jiosaavn.cdn.jio.com/330/3d3637b65e75f66ee323ea69d2374cf1_320.mp4" ,
+    "image"  : "https://i.scdn.co/image/ab67616d0000b273318443aab3531a0558e79a4d" 
+},
+{
     "name"   : "As It Was",
     //"id"     : "8",
     "singer" : "Harry Styles" ,
     "type"   : "popular" ,
     "link"   : "https://sklktcdnems07.cdnsrv.jio.com/jiosaavn.cdn.jio.com/720/ae1594f81fac092f502317bc4e25a5b2_320.mp4" ,
     "image"  : "https://i.scdn.co/image/ab67616d0000b2732e8ed79e177ff6011076f5f0" 
-},
-{
-    "name"   : "Willow",
-    //"id"     : "1",
-    "singer" : "Taylor Swift" ,
-    "type"   : "popular" ,
-    "link"   : "https://sdlhivkecdnems04.cdnsrv.jio.com/jiosaavn.cdn.jio.com/675/0330684c945a7ac8a1191f12cac6d507_320.mp4" ,
-    "image"  : "https://i.scdn.co/image/ab67616d0000b27333b8541201f1ef38941024be" 
 },
 {
     "name"   : "Dusk Till Dawn (feat. Sia)",
@@ -183,6 +199,14 @@ var data=[{
     "type"   : "popular" ,
     "link"   : "https://snoidcdnems02.cdnsrv.jio.com/jiosaavn.cdn.jio.com/883/8ff1cb5c5bc50cf85052fbdf8195c295_320.mp4" ,
     "image"  : "https://i.scdn.co/image/ab67616d0000b273c9eb4c87e1d7f5353908b712" 
+},
+{
+    "name"   : "Willow",
+    //"id"     : "1",
+    "singer" : "Taylor Swift" ,
+    "type"   : "popular" ,
+    "link"   : "https://sdlhivkecdnems04.cdnsrv.jio.com/jiosaavn.cdn.jio.com/675/0330684c945a7ac8a1191f12cac6d507_320.mp4" ,
+    "image"  : "https://i.scdn.co/image/ab67616d0000b27333b8541201f1ef38941024be" 
 },
 {
     "name"   : "We Don't Talk Anymore",
@@ -265,6 +289,14 @@ var data=[{
     "image"  : "https://i.scdn.co/image/ab67616d0000b2734127ca62352cd5af92e10457" 
 },
 {
+    "name"   : "Gul",
+    //"id"     : "8",
+    "singer" : "Anuv Jain" ,
+    "type"   : "indie" ,
+    "link"   : "https://sklktcdnems07.cdnsrv.jio.com/jiosaavn.cdn.jio.com/266/75a2c612178dea03a50e943310efa85f_320.mp4" ,
+    "image"  : "https://i.scdn.co/image/ab67616d0000b27346b1b675145743583384dc24" 
+},
+{
     "name"   : "Darshana",
     //"id"     : "1",
     "singer" : "Hesham Abdul Wahab, Darshana Rajendran" ,
@@ -319,6 +351,14 @@ var data=[{
     "type"   : "tolly" ,
     "link"   : "https://sdlhivkecdnems01.cdnsrv.jio.com/jiosaavn.cdn.jio.com/924/9a5f803342e38ceedf7405734ad4ef6f_320.mp4" ,
     "image"  : "https://i.scdn.co/image/ab67616d0000b273309f07efe994d37d93800c55" 
+},
+{
+    "name"   : "Pottu Thotta Pournami",
+    //"id"     : "7",
+    "singer" : "Hesham Abdul Wahab, Sachin Balu, Megha Josekutty" ,
+    "type"   : "tolly" ,
+    "link"   : "https://snoidcdnems04.cdnsrv.jio.com/jiosaavn.cdn.jio.com/579/274ac1854ab81e20762ba69eefb001b4_320.mp4" ,
+    "image"  : "https://i.scdn.co/image/ab67616d0000b2739b8c8ab6e0a59493a5fa06c6" 
 },
 {
     "name"   : "Kalaavathi",
