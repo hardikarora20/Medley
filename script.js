@@ -1,6 +1,6 @@
 
 var t=1;
-var maxNo=45;
+var maxNo=44;
 
 document.addEventListener("DOMContentLoaded", () => {
     welcome();
@@ -8,6 +8,9 @@ document.addEventListener("DOMContentLoaded", () => {
 window.onload = function() {
     welcome();
 };
+// window.onbeforeunload = function() {
+//     show();
+// };
 if(history.scrollRestoration){
 history.scrollRestoration="manual";}
 else{window.onbeforeunload=function(){
@@ -115,7 +118,8 @@ function setid(){
 function menu(){
     //important
     //console.log("menu() called");
-    document.getElementById("menu-bar").style.display="flex";
+    document.getElementsByClassName("menu").style.display="flex";
+    // document.getElementById("menu-bar").style.display="flex";
     document.getElementById("menu-bar").classList.toggle("menuShow");
     document.getElementById("menudark").classList.toggle("menu-dark-back");
         // let text;
@@ -204,7 +208,8 @@ function welcome(){
         document.getElementById("back-black").classList.remove("black-back-start");
         document.getElementById("welcome2").style.display="none";
         document.getElementById("music-panel").style.display="none";
-        document.getElementById("menu-bar").style.display="none";
+        document.getElementById("music-panel").style.opacity="0";
+        document.getElementsByClassName("menu").style.display="none";
         document.getElementById("suggest-id").style.display="none";
         document.getElementById("full-player").style.display="none";
         document.getElementById("title-logo").style.display="none";
@@ -227,10 +232,6 @@ function real(){
     //important
     //console.log("in loop");
     document.getElementById("page").style.display="flex";
-    document.getElementById("back-black").classList.remove("black-back-start");
-    document.getElementById("music-panel").style.display="flex";
-    document.getElementById("title-logo").style.display="flex";
-    document.getElementById("suggest-id").style.display="flex";
     document.getElementsByTagName("body")[0].classList.remove("disable-scroll");
     // welcome();
     getname();
@@ -256,6 +257,10 @@ function real(){
     }
     
     
+    document.getElementById("back-black").classList.remove("black-back-start");
+    document.getElementById("music-panel").style.display="flex";
+    document.getElementById("title-logo").style.display="flex";
+    document.getElementById("suggest-id").style.display="flex";
 }
 else{
     //important
@@ -300,6 +305,7 @@ function now_play(id){
     //console.log(id);
     document.title=data[id].name+' - '+data[id].singer;
     if(once==0){
+        document.getElementById("music-panel").style.opacity="0";
         document.getElementById("music-panel").classList.toggle("visible");
         document.getElementById("suggestion-box").classList.toggle("padding");
         once++;
