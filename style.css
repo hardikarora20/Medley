@@ -35,13 +35,13 @@ audio{
     font-weight: 600;
     margin-left: 0.3rem;
     display: inline-block;
-    z-index: 2;
+    z-index: 3;
     text-transform: capitalize;
     margin-block:  1rem 3rem;
     margin-bottom: 2rem;
 }
 .title-nav{
-    z-index: 3;
+    z-index: 5;
 }
 .title-back{
     background-image: url(https://upload.wikimedia.org/wikipedia/commons/c/c8/Very_Black_screen.jpg);
@@ -71,6 +71,7 @@ audio{
 }
 .nav svg{
     width: 2rem;
+    transition: all 0.5s ease-in-out;
     height: 2rem;
     cursor: pointer;
 }
@@ -100,67 +101,117 @@ audio{
 
 }
 .menu-dark-back{
-    background-color: rgba(0, 0, 0, 0.319);
+    background-color: rgba(0, 0, 0, 0.479);
     pointer-events: all;
+    z-index: 6;
 }
 .menu{
     color:#d9d9d9;
     /* position: absolute; */
     transform: scale(0%);
     z-index: 6;
-    padding-block: 10rem;
+    width: auto;
+    height: auto;
+    border-radius: 1rem;
+    background-color: #252525;
     display: flex;
-    border-radius: 0.5rem;
     flex-direction: column;
-    text-align: center;
-    right: 0;
-    background-color: #2E2E2E;
-    margin: 8rem 1rem;
-    padding: 1rem 1.5rem;
-    transform: scale(0.5);
-    opacity: 0;
+    /* transform: scale(0.5); */
+    opacity: 1;
     pointer-events: none;
-    transition: all 0.4s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    align-content: center;
+    flex-wrap: nowrap;
+    justify-content: center;
+    /* align-items: center; */
+}
+.menu .setting{
+    margin-block-start: 1.2rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-align: center;
+}
+.menu label{
+    margin-block: 1rem;
+    margin-inline: 0.2rem;
+    text-align: left;
+    font-size: 0.9rem;
+}
+.input-line{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: nowrap;
+    justify-items: center;
+    align-content: center;
+    margin-block-start: 0.2rem;
+    /* flex-wrap: wrap; */
+    /* flex:1fr; */
+    /* justify-content: space-evenly; */
 }
 .menu p,.menu input,.menu button{
-    text-align: center;
-    margin-block: 0.4rem;
-    width: 20rem;
-    height: 3rem;
     font-family: Poppins;
-    font-size: 1rem;
 }
 .menu p{
-    margin-block: 0.5rem 0rem;
-    font-size: 1rem;
-    text-transform:capitalize;
+    font-size: 0.8rem;
+    margin-block-start: -0rem;
+    margin-inline: 0.2rem;
 }
 .menu input,.menu button{
     outline: none;
-    padding-inline: 1rem;
     border: none;
-    border-radius: 0.2rem;
-    transition: all 0.4s ease-in-out;
+    font-size: 0.9rem;
+    padding: 0.8rem 2rem;
+    border-radius: 0.6rem;
+    transition: all 0.3s ease-in-out;
 }
 .menu input{
-    margin-top: -0.2rem;
-    background-color: #bebebe;
+    background-color: #C1C1C1;
+    padding-inline: 1rem;
+    width: auto;
+    border-radius: 0.6rem 0rem 0rem 0.6rem;
 }
-.menu button{
-    background-color: #e4e4e4;
+.menu #save-button{
+    text-align: center;
+    width: auto;
+    border-radius: 0rem 0.6rem 0.6rem 0rem;
+    
+}
+.user-change{
+    margin-inline: 0.2rem;
+    margin-block-end: 1.5rem;
+}
+.reset-form{
+    margin-inline: 0.2rem;
 }
 .menu input:hover{
-    background-color: #dcdbdb;
+    background-color: #aaaaaa;
 }
-.menu button:hover{
-    background-color: #c1c1c1;
+.menu #save-button:hover{
+    background-color: #25668b;
     cursor: pointer;
+}
+.menu #reset:hover{
+    background-color: #942c2c;
+    cursor: pointer;
+}
+#save-button{
+    background-color: #3F8BB6;
+    color:white;
 }
 #reset{
-    font-size: 1rem;
-    margin-block: 1rem -1rem;
-    text-decoration: underline;
+    background-color: #B63F3F;
     cursor: pointer;
+    color:white;
+    width: 10rem;
+}
+.reset-button{
+    display: flex;
+    align-content: center;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    margin-block-end: 1rem;
 }
 .menuShow{
     transform: scale(100%);
@@ -1069,7 +1120,39 @@ background-color: #434343;
         margin-top: -12rem;
     }
     .menu{
-        display: flex;
+        padding-inline: 3rem;
+    }
+    .menu .setting{
+        margin-block-start: 3rem;
+        font-size: 4rem;
+    }
+    .input-line{
+        margin-block-start: 1rem;
+    }
+    .menu label{
+        font-size: 2.5rem;
+    }
+
+    .menu input{
+        font-size: 1.8rem;
+        padding-inline: 2rem;
+        padding-block: 1.5rem;
+    }
+    .menu p{
+        font-size: 1.8rem;
+    }
+    .menu button{
+        font-size: 1.8rem;
+        padding-block: 1.5rem;
+        /* padding-inline: 2rem; */
+        /* transform: scale(1.2); */
+        /* height: 6rem; */
+    }
+    .reset-button{
+        margin-block-end: 3rem;
+    }
+    /* .menu{ */
+        /* display: flex;
         align-content: center;
         align-items: center;
         justify-content: center;
@@ -1098,7 +1181,7 @@ background-color: #434343;
     }
     .menu input{
         margin-top: -0.2rem;
-    }
+    } */
     #save{
         margin: 0;
         margin-block: 1rem;

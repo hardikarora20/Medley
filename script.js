@@ -120,6 +120,8 @@ function menu(){
     //console.log("menu() called");
     // document.getElementsByClassName("menu-bar").style.display="flex";
     // document.getElementById("menu-bar").style.display="flex";
+    document.getElementById("setting-icon").style.transform="rotate(60deg)";
+    document.getElementsByTagName("body")[0].classList.add("disable-scroll");
     document.getElementById("menu-bar").style.display="flex";
     document.getElementById("menu-bar").classList.toggle("menuShow");
     document.getElementById("menudark").classList.toggle("menu-dark-back");
@@ -189,6 +191,8 @@ function getname(){
 }
 
 function removemenu(){
+    document.getElementsByTagName("body")[0].classList.remove("disable-scroll");
+    document.getElementById("setting-icon").style.transform="rotate(0deg)";
     document.getElementById("menu-bar").classList.remove("menuShow");    
     document.getElementById("menudark").classList.remove("menu-dark-back");    
 }
@@ -219,7 +223,7 @@ function welcome(){
     real();
 }
 function reset(){
-    document.getElementById("reset").innerHTML="Reset successful";
+    document.getElementById("reset").innerHTML="Reset Successful!";
     localStorage.clear();
     setInterval(function () 
     {
