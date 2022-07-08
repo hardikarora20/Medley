@@ -231,6 +231,7 @@ function real(){
     document.getElementById("full-player").style.display="flex";
     document.getElementById("title-logo").style.display="flex";
     document.getElementById("suggest-id").style.display="flex";
+    document.getElementById("welcome2").style.display="flex";
     document.getElementById("menu-bar").style.display="flex";
     document.getElementsByTagName("body")[0].classList.remove("disable-scroll");
     // welcome();
