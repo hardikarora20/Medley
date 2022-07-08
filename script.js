@@ -118,8 +118,9 @@ function setid(){
 function menu(){
     //important
     //console.log("menu() called");
-    document.getElementsByClassName("menu").style.display="flex";
+    // document.getElementsByClassName("menu-bar").style.display="flex";
     // document.getElementById("menu-bar").style.display="flex";
+    document.getElementById("menu-bar").style.display="flex";
     document.getElementById("menu-bar").classList.toggle("menuShow");
     document.getElementById("menudark").classList.toggle("menu-dark-back");
         // let text;
@@ -209,7 +210,7 @@ function welcome(){
         document.getElementById("welcome2").style.display="none";
         document.getElementById("music-panel").style.display="none";
         document.getElementById("music-panel").style.opacity="0";
-        document.getElementsByClassName("menu").style.display="none";
+        document.getElementById("menu-bar").style.display="flex";
         document.getElementById("suggest-id").style.display="none";
         document.getElementById("full-player").style.display="none";
         document.getElementById("title-logo").style.display="none";
