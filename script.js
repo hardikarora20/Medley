@@ -48,7 +48,8 @@ function local(){
     var k=1;
     var local=0
     for(var i=0;i<100;i++){
-        console.log(document.getElementsByTagName("div")[i].innerHTML=='Jump in');
+        //important
+        //console.log(document.getElementsByTagName("div")[i].innerHTML=='Jump in');
         if((document.getElementsByTagName("div")[i].innerHTML=='Jump in')){
             local=parseInt(localStorage.getItem("last"+k+""));
             if(localStorage.getItem("last"+k+"")==null){
@@ -80,10 +81,12 @@ function recommend(){
     }
 }
 
-console.log(localStorage.getItem("last1")=="0");
+//important
+//console.log(localStorage.getItem("last1")=="0");
         function localcheck(){
             if(localStorage.getItem("last1")==null){
-                console.log("last null")
+                //important
+                //console.log("last null")
             
         document.getElementById("last-played").style.display="none";
     }
@@ -99,7 +102,8 @@ function egg(){
 }
 
 function setid(){
-    console.log("setting id");
+    //important
+    //console.log("setting id");
     var newid=0;
     for(var i=0;i<379;i++){
     if(document.getElementsByTagName("div")[i].innerText=='Song Name'){
@@ -109,7 +113,8 @@ function setid(){
     }
 }
 function menu(){
-    console.log("menu() called");
+    //important
+    //console.log("menu() called");
     document.getElementById("menu-bar").classList.toggle("menuShow");
     document.getElementById("menudark").classList.toggle("menu-dark-back");
         // let text;
@@ -140,7 +145,8 @@ function sendMail(){
 
 function nextgallery(){
     if(window.innerHeight > window.innerWidth){
-        console.log("port");
+        //important
+    //console.log("port");
         var i=4;
         setInterval(function () 
         {
@@ -153,7 +159,8 @@ function nextgallery(){
         }, 4000);
     }
     else{
-        console.log("landscape");
+        //important
+    //console.log("landscape");
         var i=1;
         setInterval(function () 
         {
@@ -182,7 +189,8 @@ function removemenu(){
 
 function welcome(){
     if(localStorage.getItem("welcome")=="disable"){
-        console.log("function welcome true");
+        //important
+        //console.log("function welcome true");
         welcomedone=1;
         document.getElementById("explore-arrow").style.display="none";
         document.getElementById("welcome").style.zIndex="-100";
@@ -212,8 +220,10 @@ function reset(){
 }
 function real(){
     if(welcomedone==1){
-    console.log(document.getElementsByTagName("div").length);
-    console.log("in loop");
+    //important
+    //console.log(document.getElementsByTagName("div").length);
+    //important
+    //console.log("in loop");
     document.getElementById("page").style.display="flex";
     document.getElementById("back-black").classList.remove("black-back-start");
     document.getElementById("music-panel").style.display="flex";
@@ -228,14 +238,15 @@ function real(){
     localcheck();
     recommend();
     for(var k=1;k<=8;k++){
-    console.log(localStorage.getItem("last"+k+""));
+    //important
+    //console.log(localStorage.getItem("last"+k+""));
     }
     var index=0;
     for(var i=0,j=2;i<379;i++,j=j+2){
         document.getElementsByTagName("div")[i].style.animationDelay=""+j+t+"ms";
         // t=t-0
         .1;
-        if((document.getElementsByTagName("div")[i].innerText=='Song Name')&&(index<46)){
+        if((document.getElementsByTagName("div")[i].innerText=='Song Name')&&(index<45)){
             document.getElementsByTagName("div")[i+1].innerText=data[index].singer;
             document.getElementsByTagName("div")[i].innerText=data[index].name;    
             document.getElementsByTagName("div")[i-2].style.backgroundImage='url('+data[index].image+')';
@@ -245,7 +256,8 @@ function real(){
     }
 }
 else{
-    console.log("not in loop");
+    //important
+    //console.log("not in loop");
 }
 }
 var intervalId = window.setInterval(function(){
@@ -282,7 +294,8 @@ var currentname="Song";
 var currentinfo="Info";
 var currentimage="https://i.scdn.co/image/ab67616d0000b273459d675aa0b6f3b211357370";
 function now_play(id){
-    console.log(id);
+    //important
+    //console.log(id);
     document.title=data[id].name+' - '+data[id].singer;
     if(once==0){
         document.getElementById("music-panel").classList.toggle("visible");
@@ -311,7 +324,8 @@ function now_play(id){
 function updateVar(){
     currentname=document.getElementById("current").innerHTML;
     currentinfo=document.getElementById("current-singer").innerHTML;
-    console.log("currentinfo");
+    //important
+    //console.log("currentinfo");
 }
 
 // if ('mediaSession' in navigator) {
@@ -365,13 +379,10 @@ function show(){
     //     document.exitFullscreen();
     // }
 }
-console.log(test());
-function test(){
-    return document.getElementById("current").innerHTML;
-}
 function medias(){
     const audio=document.getElementsByTagName("audio")[0];
-    console.log("called");
+    //important
+    //console.log("called");
     if ('mediaSession' in navigator) {
         const events=["durationchange","timechange"];
         for(const event in events)
@@ -410,25 +421,6 @@ function medias(){
 }
 
 
-var img = document.createElement('img');
-img.setAttribute('src', 'examples/octocat.png')
-
-img.addEventListener('load', function() {
-    var vibrant = new Vibrant(img);
-    var swatches = vibrant.swatches()
-    for (var swatch in swatches)
-        if (swatches.hasOwnProperty(swatch) && swatches[swatch])
-            console.log(swatch, swatches[swatch].getHex())
-
-    /*
-     * Results into:
-     * Vibrant #7a4426
-     * Muted #7b9eae
-     * DarkVibrant #348945
-     * DarkMuted #141414
-     * LightVibrant #f3ccb4
-     */
-});
         
 function seekforward(){
     document.getElementsByTagName("audio")[0].currentTime += 10;
@@ -463,11 +455,13 @@ function songloop(){
     if(document.getElementById("loop-song-id").classList.contains("loop-on")){
         document.getElementsByTagName("audio")[0].removeAttribute("loop");
         // document.getElementsByClassName("loop-song-full").style.content="hello";
-        console.log("loop off");
+        //important
+    //console.log("loop off");
     }
     else{
     document.getElementsByTagName("audio")[0].setAttribute("loop","loop");
-    console.log("loop on");
+    //important
+    //console.log("loop on");
     }
     document.getElementById("loop-song-id").classList.toggle("loop-on");
 }
@@ -475,11 +469,13 @@ function songmute(){
     document.getElementById("mute-song-id").classList.toggle("loop-on");
     if(document.getElementById("mute-song-id").classList.contains("loop-on")){
         document.getElementsByTagName("audio")[0].muted = true;
-        console.log("mute on");
+        //important
+    //console.log("mute on");
     }
     else{
     document.getElementsByTagName("audio")[0].muted = false;
-    console.log("mute off");
+    //important
+    //console.log("mute off");
     }
 }
 function next(){
