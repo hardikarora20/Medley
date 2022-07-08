@@ -115,6 +115,7 @@ function setid(){
 function menu(){
     //important
     //console.log("menu() called");
+    document.getElementById("menu-bar").style.display="flex";
     document.getElementById("menu-bar").classList.toggle("menuShow");
     document.getElementById("menudark").classList.toggle("menu-dark-back");
         // let text;
@@ -228,10 +229,8 @@ function real(){
     document.getElementById("page").style.display="flex";
     document.getElementById("back-black").classList.remove("black-back-start");
     document.getElementById("music-panel").style.display="flex";
-    document.getElementById("full-player").style.display="flex";
     document.getElementById("title-logo").style.display="flex";
     document.getElementById("suggest-id").style.display="flex";
-    document.getElementById("menu-bar").style.display="flex";
     document.getElementsByTagName("body")[0].classList.remove("disable-scroll");
     // welcome();
     getname();
@@ -255,6 +254,8 @@ function real(){
             index++;
         }
     }
+    
+    
 }
 else{
     //important
@@ -372,6 +373,7 @@ function pageLeft2(){
 
 function show(){
     // document.body.requestFullscreen();
+    document.getElementById("full-player").style.display="flex";
     document.getElementById("full-player").classList.toggle("visible");
     document.getElementById("full-black").classList.toggle("visible");
     // if(document.getElementById("full-player").classList.contains("visible")){
