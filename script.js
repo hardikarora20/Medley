@@ -306,7 +306,7 @@ function now_play(id){
     //console.log(id);
     document.title=data[id].name+' - '+data[id].singer;
     if(once==0){
-        document.getElementById("music-panel").style.opacity="0";
+        document.getElementById("music-panel").style.opacity="1";
         document.getElementById("music-panel").classList.toggle("visible");
         document.getElementById("suggestion-box").classList.toggle("padding");
         once++;
