@@ -365,10 +365,6 @@ function show(){
     //     document.exitFullscreen();
     // }
 }
-console.log(test());
-function test(){
-    return document.getElementById("current").innerHTML;
-}
 function medias(){
     const audio=document.getElementsByTagName("audio")[0];
     console.log("called");
