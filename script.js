@@ -320,6 +320,7 @@ function now_play(id){
     currentinfo=data[id].singer;
     currentimage=data[id].image;
     medias();
+    document.getElementById("player").classList.add("playing");
     document.getElementById("current").innerText=data[id].name;
     document.getElementById("current-singer").innerText=data[id].singer;
     document.getElementById("now-image").style.backgroundImage='url('+data[id].image+')';
