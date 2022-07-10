@@ -164,7 +164,7 @@ function nextgallery(){
                 document.getElementById("gallery-img").style.backgroundImage="url(images/"+i+".webp)";
                 i++;
             
-        }, 4000);
+        }, 4200);
     }
     else{
         //important
@@ -190,6 +190,28 @@ function getname(){
 }
 }
 
+function nextsong(){
+    console.log("next");
+    if(currentID>43){
+        now_play(currentID);
+    }
+    else{
+        currentID++;
+        now_play(currentID);
+    }
+}
+
+function prevsong(){
+    console.log("prev");
+    if(currentID<1){
+        now_play(currentID);
+    }
+    else{
+        currentID--;
+        now_play(currentID);
+    }
+}
+
 function removemenu(){
     document.getElementsByTagName("body")[0].classList.remove("disable-scroll");
     document.getElementById("setting-icon").style.transform="rotate(0deg)";
@@ -207,6 +229,7 @@ function welcome(){
         document.getElementById("welcome").style.display="none";
         document.getElementById("welcome2").style.zIndex="-100";
         document.getElementById("welcome2").style.display="none";
+        updatedstatus();
     }
     else{
         document.getElementById("page").style.display="none";
@@ -223,7 +246,7 @@ function welcome(){
     real();
 }
 function reset(){
-    document.getElementById("reset").innerHTML="Reset Successful!";
+    document.getElementById("reset").innerHTML="Done!";
     localStorage.clear();
     setInterval(function () 
     {
@@ -271,6 +294,7 @@ else{
     //important
     //console.log("not in loop");
 }
+// updatedstatus();
 }
 var intervalId = window.setInterval(function(){
 
@@ -301,6 +325,7 @@ function play(){
     document.getElementById("player").classList.toggle("playing");
 }
 var once=0;
+var currentID=0;
 var idNow=1;
 var currentname="Song";
 var currentinfo="Info";
@@ -308,11 +333,11 @@ var currentimage="https://i.scdn.co/image/ab67616d0000b273459d675aa0b6f3b2113573
 function now_play(id){
     //important
     //console.log(id);
-    document.title=data[id].name+' - '+data[id].singer;
+    document.title="Medley";
     if(once==0){
         document.getElementById("music-panel").style.opacity="1";
         document.getElementById("music-panel").classList.toggle("visible");
-        document.getElementById("suggestion-box").classList.toggle("padding");
+        document.getElementById("suggestion-box").classList.add("padding");
         once++;
     }
     // document.getElementById("seek-audio").max=document.getElementById("player").duration;
@@ -320,6 +345,7 @@ function now_play(id){
     currentinfo=data[id].singer;
     currentimage=data[id].image;
     medias();
+    document.getElementById("player").classList.add("playing");
     document.getElementById("current").innerText=data[id].name;
     document.getElementById("current-singer").innerText=data[id].singer;
     document.getElementById("now-image").style.backgroundImage='url('+data[id].image+')';
@@ -333,6 +359,7 @@ function now_play(id){
     document.getElementsByTagName("audio")[0].play();
     localStorage.setItem("last"+idNow+"",id); 
     idNow++;
+    currentID=id;
 }
 function updateVar(){
     currentname=document.getElementById("current").innerHTML;
@@ -380,6 +407,16 @@ function pageLeft2(){
     real();
     localStorage.setItem("welcome","disable");
     document.getElementsByTagName("body")[0].classList.remove("disable-scroll");
+    updatedstatus();
+    
+}
+function updatedstatus(){
+    var updated=localStorage.getItem("updatestatus");
+    console.log("in updated");
+    if(updated==null){
+        alert("Medley has been updated to v1.3\n\nChange log:\n• Added next/prev buttons in full screen player\n• Position of +10s/-10s seek has been changed\n• Added autoplay next song after current song ends\n• Completely redesigned Settings UI\n• Updated UI colors of full screen player\n• Added next/prev option to notification panel\n• Performance and stability improvements\n\nEnjoy the new update! ✨");
+        localStorage.setItem("updatestatus",1);
+    }   
 }
 
 function show(){
@@ -422,21 +459,33 @@ function medias(){
           position: audio.currentTime,
         });
     }
-        navigator.mediaSession.setActionHandler('play', function() { audio.play();/* Code excerpted. */ });
-        navigator.mediaSession.setActionHandler('pause', function() { audio.pause();/* Code excerpted. */ });
-        navigator.mediaSession.setActionHandler('stop', function() { /* Code excerpted. */ });
-        navigator.mediaSession.setActionHandler('seekbackward', function() { seekbackward();/* Code excerpted. */ });
-        navigator.mediaSession.setActionHandler('seekforward', function() { seekforward();/* Code excerpted. */ });
-        // navigator.mediaSession.setActionHandler('seekto', function() { /* Code excerpted. */ });
-        // navigator.mediaSession.setActionHandler('previoustrack', function() { /* Code excerpted. */ });
-        // navigator.mediaSession.setActionHandler('nexttrack', function() { /* Code excerpted. */ });
-        // navigator.mediaSession.setActionHandler('skipad', function() { /* Code excerpted. */ });
+        navigator.mediaSession.setActionHandler('play', function() { audio.play(); });
+        navigator.mediaSession.setActionHandler('pause', function() { audio.pause(); });
+        navigator.mediaSession.setActionHandler('stop', function() {  });
+        navigator.mediaSession.setActionHandler('seekbackward', function() { seekbackward(); });
+        navigator.mediaSession.setActionHandler('seekforward', function() { seekforward(); });
+        // navigator.mediaSession.setActionHandler('seekto', function() {  });
+        navigator.mediaSession.setActionHandler('previoustrack', function() { prevsong(); });
+        navigator.mediaSession.setActionHandler('nexttrack', function() { nextsong(); });
+        // navigator.mediaSession.setActionHandler('skipad', function() {  });
       }
       
 }
 
+setInterval(function () 
+{
+    var audio=document.getElementsByTagName("audio")[0];
+    if((audio.currentTime+1>=audio.duration)&&(audio.duration > 0 && !audio.paused)){
+        console.log("about to end");
+        setTimeout(nextsong(), 1000);
+    }
+    console.log((audio.duration > 0 && !audio.paused))
+    console.log(audio.duration);
+    console.log(document.getElementById("player").classList.contains("playing"));
+    console.log(audio.currentTime);
 
-        
+}, 1000);
+
 function seekforward(){
     document.getElementsByTagName("audio")[0].currentTime += 10;
 }
