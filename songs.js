@@ -1,4 +1,32 @@
 var data=[{
+    "name"   : "All Too Well (Taylor's Version)",
+    //"id"     : "1",
+    "singer" : "Taylor Swift" ,
+    "type"   : "featured" ,
+    "link"   : "https://sdlhivkecdnems01.cdnsrv.jio.com/jiosaavn.cdn.jio.com/330/fb2f8508b7049912e482ee5ee2697f17_320.mp4" , 
+    "image"  : "https://i.scdn.co/image/ab67616d0000b273318443aab3531a0558e79a4d" 
+},{
+    "name"   : "Lover (Remix)",
+    //"id"     : "1",
+    "singer" : "Taylor Swift, Shawn Mendes" ,
+    "type"   : "featured" ,
+    "link"   : "https://sklktecdnems05.cdnsrv.jio.com/jiosaavn.cdn.jio.com/219/bed6f6f73cc56ee7ca95db3f3a3081a3_320.mp4" , 
+    "image"  : "https://i.scdn.co/image/ab67616d0000b27359457bdb1edb5c6417f3baa2" 
+},{
+    "name"   : "La Vie En Rose",
+    //"id"     : "1",
+    "singer" : "Daniela Andrade" ,
+    "type"   : "featured" ,
+    "link"   : "https://sklktecdnems04.cdnsrv.jio.com/jiosaavn.cdn.jio.com/670/adb3380e5d79bf5f338f7510a8b1bec9_320.mp4" , 
+    "image"  : "https://i.scdn.co/image/ab67616d0000b273062f859ffcba42823f00c6c0" 
+},{
+    "name"   : "Better Man (Taylor's Version)",
+    //"id"     : "1",
+    "singer" : "Taylor Swift" ,
+    "type"   : "featured" ,
+    "link"   : "https://sdlhivkecdnems01.cdnsrv.jio.com/jiosaavn.cdn.jio.com/330/fb2f8508b7049912e482ee5ee2697f17_320.mp4" , 
+    "image"  : "https://i.scdn.co/image/ab67616d0000b273563151cc3a0528d8228998c8" 
+},{
     "name"   : "Let Me Down Slowly",
     //"id"     : "1",
     "singer" : "Alec Benjamin" ,
