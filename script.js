@@ -1,6 +1,6 @@
 
 var t=1;
-var maxNo=48;
+var maxNo=57;
 
 document.addEventListener("DOMContentLoaded", () => {
     welcome();
@@ -108,7 +108,7 @@ function setid(){
     //important
     //console.log("setting id");
     var newid=0;
-    for(var i=0;i<410;i++){
+    for(var i=0;i<458;i++){
     if(document.getElementsByTagName("div")[i].innerText=='Song Name'){
         document.getElementsByTagName("div")[i-3].setAttribute("id",parseInt(newid));    
         newid++;
@@ -271,11 +271,11 @@ function real(){
     //console.log(localStorage.getItem("last"+k+""));
     }
     var index=0;
-    for(var i=0,j=2;i<410;i++,j=j+2){
+    for(var i=0,j=2;i<458;i++,j=j+2){
         document.getElementsByTagName("div")[i].style.animationDelay=""+j+t+"ms";
         // t=t-0
         .1;
-        if((document.getElementsByTagName("div")[i].innerText=='Song Name')&&(index<49)){
+        if((document.getElementsByTagName("div")[i].innerText=='Song Name')&&(index<58)){
             document.getElementsByTagName("div")[i+1].innerText=data[index].singer;
             document.getElementsByTagName("div")[i].innerText=data[index].name;    
             document.getElementsByTagName("div")[i-2].style.backgroundImage='url('+data[index].image+')';

@@ -396,6 +396,78 @@ var data=[{
     "link"   : "https://sdlhivkcdnems05.cdnsrv.jio.com/jiosaavn.cdn.jio.com/250/d067c88312cbc32cc708e20ff55f4360_320.mp4" ,
     "image"  : "https://i.scdn.co/image/ab67616d0000b273628c64b83f6ff72b9f472699" 
 },
+{
+    "name"   : "Fair Trade",
+    //"id"     : "8",
+    "singer" : "Drake, Travis Scott" ,
+    "type"   : "rap" ,
+    "link"   : "https://snoidcdnems06.cdnsrv.jio.com/jiosaavn.cdn.jio.com/901/0299c9ac23a5254ffad429556c2a9cf9_320.mp4" ,
+    "image"  : "https://i.scdn.co/image/ab67616d0000b273cd945b4e3de57edd28481a3f" 
+},
+{
+    "name"   : "a lot",
+    //"id"     : "8",
+    "singer" : "21 Savage" ,
+    "type"   : "rap" ,
+    "link"   : "https://sklktecdnems02.cdnsrv.jio.com/jiosaavn.cdn.jio.com/512/890891eb5b25f0ecbce1c77c6b25b270_320.mp4" ,
+    "image"  : "https://i.scdn.co/image/ab67616d0000b273280689ecc5e4b2038bb5e4bd" 
+},
+{
+    "name"   : "Lucid Dreams",
+    //"id"     : "8",
+    "singer" : "Juice WRLD" ,
+    "type"   : "rap" ,
+    "link"   : "https://sklktcdnems01.cdnsrv.jio.com/jiosaavn.cdn.jio.com/530/1e434167db18f940a4f82ead944bce86_320.mp4" ,
+    "image"  : "https://i.scdn.co/image/ab67616d0000b273f7db43292a6a99b21b51d5b4" 
+},
+{
+    "name"   : "Jimmy Cooks",
+    //"id"     : "8",
+    "singer" : "Drake" ,
+    "type"   : "rap" ,
+    "link"   : "https://snoidcdnems04.cdnsrv.jio.com/jiosaavn.cdn.jio.com/386/6a26806e3ca733bbc03922a123f73900_320.mp4" ,
+    "image"  : "https://i.scdn.co/image/ab67616d0000b2738dc0d801766a5aa6a33cbe37" 
+},
+{
+    "name"   : "goosebumps",
+    //"id"     : "8",
+    "singer" : "Travis Scott" ,
+    "type"   : "rap" ,
+    "link"   : "https://snoidcdnems06.cdnsrv.jio.com/jiosaavn.cdn.jio.com/645/98054781f4c1c8efc63292f459014de7_320.mp4" ,
+    "image"  : "https://i.scdn.co/image/ab67616d0000b273f54b99bf27cda88f4a7403ce" 
+},
+{
+    "name"   : "Come & Go",
+    //"id"     : "8",
+    "singer" : "Juice WRLD, Marshmello" ,
+    "type"   : "rap" ,
+    "link"   : "https://sklktecdnems03.cdnsrv.jio.com/jiosaavn.cdn.jio.com/302/3439c3cb1302ad4f9bdaa5f3f7c51ef9_320.mp4" ,
+    "image"  : "https://i.scdn.co/image/ab67616d0000b2733e0698e4ae5ffb82a005aeeb" 
+},
+{
+    "name"   : "I'm on one",
+    //"id"     : "8",
+    "singer" : "Future, Drake" ,
+    "type"   : "rap" ,
+    "link"   : "https://snoidcdnems06.cdnsrv.jio.com/jiosaavn.cdn.jio.com/805/34afb238accb1412f8f984022fb97d35_320.mp4" ,
+    "image"  : "https://i.scdn.co/image/ab67616d0000b27386badd635b69aea887862214" 
+},
+{
+    "name"   : "Hate Me",
+    //"id"     : "8",
+    "singer" : "Ellie Goulding, Juice WRLD" ,
+    "type"   : "rap" ,
+    "link"   : "https://snoidcdnems02.cdnsrv.jio.com/jiosaavn.cdn.jio.com/947/fec76b4a7e10769da6c86af8e9fc4873_320.mp4" ,
+    "image"  : "https://i.scdn.co/image/ab67616d0000b273dc854e032e8588d5e75eebc6" 
+},
+{
+    "name"   : "True Love",
+    //"id"     : "8",
+    "singer" : "Kanye West, XXXTENTACION" ,
+    "type"   : "rap" ,
+    "link"   : "https://sdlhivkcdnems03.cdnsrv.jio.com/jiosaavn.cdn.jio.com/247/574881a2703a24682d53ab1e83d7f99d_320.mp4" ,
+    "image"  : "https://i.scdn.co/image/ab67616d0000b273f52f6a4706fea3bde44467c3" 
+},
 ];
 
 
