@@ -164,7 +164,7 @@ function nextgallery(){
                 document.getElementById("gallery-img").style.backgroundImage="url(images/"+i+".webp)";
                 i++;
             
-        }, 4200);
+        }, 2200);
     }
     else{
         //important
@@ -178,7 +178,7 @@ function nextgallery(){
                 document.getElementById("gallery-img").style.backgroundImage="url(images/"+i+".webp)";
                 i++;
             
-        }, 4000);
+        }, 2200);
     }
 }
 
