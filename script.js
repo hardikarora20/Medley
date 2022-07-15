@@ -475,16 +475,18 @@ function medias(){
 
 setInterval(function () 
 {
-    var audio=document.getElementsByTagName("audio")[0];
-    if((audio.currentTime+1>=audio.duration)&&(audio.duration > 0 && !audio.paused)){
-        console.log("about to end");
-        setTimeout(nextsong(), 1000);
+    if(document.getElementById("loop-song-id").classList.contains("loop-on")){}
+    else{    
+        var audio=document.getElementsByTagName("audio")[0];
+        if((audio.currentTime+1>=audio.duration)&&(audio.duration > 0 && !audio.paused)){
+            console.log("about to end");
+            setTimeout(nextsong(), 1000);
+        }
+        console.log((audio.duration > 0 && !audio.paused))
+        console.log(audio.duration);
+        console.log(document.getElementById("player").classList.contains("playing"));
+        console.log(audio.currentTime);
     }
-    console.log((audio.duration > 0 && !audio.paused))
-    console.log(audio.duration);
-    console.log(document.getElementById("player").classList.contains("playing"));
-    console.log(audio.currentTime);
-
 }, 1000);
 
 function seekforward(){
