@@ -233,7 +233,7 @@ audio{
     margin-bottom: 1rem;
 }
 .menuShow{
-    transform: scale(100%);
+    transform: scale(1);
     margin: 8rem 1rem;
     padding: 1rem 1.5rem;
     opacity: 1;
