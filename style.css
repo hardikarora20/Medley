@@ -6,6 +6,7 @@
   }
 html{
     scroll-behavior: smooth;
+    scrollbar-width: none;
     -webkit-tap-highlight-color:  rgba(255, 255, 255, 0); 
 }
 body{
@@ -108,7 +109,7 @@ audio{
 .menu{
     color:#d9d9d9;
     /* position: absolute; */
-    transform: scale(0%);
+    transform: scale(0);
     z-index: 6;
     width: auto;
     height: auto;
@@ -382,9 +383,9 @@ audio{
     margin-bottom: -8rem;
 }
 .gallery-image{
-    aspect-ratio: 16 / 9;
-    width: 80%;
-    /* height: 70%; */
+    /* aspect-ratio: 16 / 9; */
+    width: 65vw;
+    height: 35vw;
     margin-top: -5rem;
     margin-bottom: 1rem;
     border-radius: 1rem;
@@ -537,6 +538,7 @@ audio{
 .list-albums{
     z-index: 2;
     display: flex;
+    scrollbar-width: none;
     /* margin-inline: 10rem; */
     flex-direction: row;
     padding-block: 2rem;
@@ -550,8 +552,9 @@ audio{
     /* background-color: bisque; */
 }
 .list-song-image{
-    aspect-ratio: 1/1;
+    /* aspect-ratio: 1/1; */
     width: 12rem;
+    height: 12rem;
     border-radius: 0.8rem;
     cursor: pointer;
     background-color: #2e2e2e;
@@ -652,8 +655,9 @@ audio{
     align-items: center;
 }
 .current-image{
-    aspect-ratio: 1/1;
+    /* aspect-ratio: 1/1; */
     width: 5.5rem;
+    height: 5.5rem;
     transition: all 0.4s ease-in-out;
     border-radius: 0.8rem;
     margin: 1.5rem;
@@ -805,7 +809,21 @@ audio{
     background: #d8d8d8;
     box-shadow: -90vw 0 0 90vw #ffffff1b;
 }
-
+#dur-panel::-moz-range-track {
+    height: 10px;
+    -webkit-appearance: none;
+    color: #ffffff;
+    margin-top: -1px;
+    transition: all 0.6s ease-in-out;
+}
+#dur-panel::-moz-range-thumb {  
+    width: 0px;
+    -webkit-appearance: none;
+    /* height: 10px; */
+    transition: all 0.6s ease-in-out;
+    background: #d8d8d8;
+    box-shadow: -90vw 0 0 90vw #ffffff1b;
+}
 @keyframes fade {
     from {
         opacity: 0;
@@ -1077,18 +1095,27 @@ input[type='range']::-webkit-slider-thumb {
     box-shadow: -200px 0 0 200px #d5d5d5;
 }
 
-input[type="range"]::-moz-range-progress {
-background-color: #ffffff; 
+input[type="range"]::-moz-range-track {
+    height: 10px;
+    -webkit-appearance: none;
+    color: #ffffff;
+    margin-top: -1px;
+    outline: none;
 }
-input[type="range"]::-moz-range-track {  
-background-color: #434343;
+input[type="range"]::-moz-range-thumb {  
+    -webkit-appearance: none;
+    width: 0px;
+    height: 10px;
+    outline: none;
+    background: #c1c1c1;
+    box-shadow: -200px 0 0 200px #d5d5d5;
 }
 
 input[type="range"]::-ms-fill-lower {
-background-color: #ffffff; 
+    background-color: #434343;
 }
 input[type="range"]::-ms-fill-upper {  
-background-color: #434343;
+    background-color: #ffffff; 
 }
 
 .suggest{
@@ -1258,9 +1285,9 @@ background-color: #434343;
         margin-bottom: 1rem;
     }
     .gallery-image{
-        aspect-ratio: 3 / 4;
-        width: 200vw;
-        height: 120vw;
+        /* aspect-ratio: 3 / 4; */
+        width: 210vw;
+        height: 100vw;
         background-color: #313131;
         background-image: url(images/default.webp);
         background-size: 101%;
@@ -1299,6 +1326,7 @@ background-color: #434343;
     }
     .list-song-image{
         width: 25rem;
+        height: 25rem;
         background-size: 25.8rem;
     }
     .list-song-image:hover{
@@ -1330,6 +1358,7 @@ background-color: #434343;
     }
     .current-image{
         width: 10rem;
+        height: 10rem;
         background-size: 10.2rem;
     }
     .current-image::before{
@@ -1343,14 +1372,14 @@ background-color: #434343;
     }
     .current-name{
         font-size: 2.5rem;
-        width: 25rem;
+        width: 22rem;
         overflow: scroll;
     }
     .current-info{
         font-size: 1.8rem;
         white-space: nowrap;
         overflow: scroll;
-        width: 25rem;
+        width: 22rem;
         text-overflow: ellipsis;
     }
     .player-panel{
@@ -1401,14 +1430,14 @@ background-color: #434343;
         bottom:0rem;
         border-radius: 2rem;
         margin-inline: 1rem 0rem;
-        margin-inline-start: -0.3rem;
+        margin-inline-start: -0.5rem;
         height: 14rem;
     }
     #dur-panel::-webkit-slider-thumb {
         box-shadow: -98vw 0 0 98vw #ffffff1b;
     }
     .media-controls{
-        margin-inline-end: 2rem;
+        /* margin-inline-end: 2rem; */
     }
     .play,.next,.prev{
         width: 4rem;
@@ -1430,13 +1459,13 @@ background-color: #434343;
         height: 5rem;
     }
     .full-screen-player{
-        width: 101vw;
-        height: 101vh;
+        width: 100vw;
+        height: 100vh;
     }
     .full-screen-cover{
         background-size: 110vh;
-        width: 101vw;
-        height: 101vh;
+        width: 100vw;
+        height: 100vh;
     }
     .full-screen-album{
         width: 45rem;
