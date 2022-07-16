@@ -67,7 +67,11 @@ audio{
     right:0;
     z-index: 6;
     padding-block: -4rem;
+    padding-top: -4rem;
+    padding-bottom: -4rem;
     padding-inline: 6rem;
+    padding-left: 6rem;
+    padding-right: 6rem;
     margin-top: -6rem;
 }
 .nav svg{
@@ -134,7 +138,11 @@ audio{
 }
 .menu label{
     margin-block: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
     margin-inline: 0.2rem;
+    margin-left: 0.2rem;
+    margin-right: 0.2rem;
     text-align: left;
     font-size: 0.9rem;
 }
@@ -157,6 +165,8 @@ audio{
     font-size: 0.8rem;
     margin-block-start: -0rem;
     margin-inline: 0.2rem;
+    margin-left: 0.2rem;
+    margin-right: 0.2rem;
 }
 .menu input,.menu button{
     outline: none;
@@ -169,6 +179,8 @@ audio{
 .menu input{
     background-color: #C1C1C1;
     padding-inline: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
     width: auto;
     border-radius: 0.6rem 0rem 0rem 0.6rem;
 }
@@ -181,9 +193,14 @@ audio{
 .user-change{
     margin-inline: 0.2rem;
     margin-block-end: 1.5rem;
+    margin-left: 0.2rem;
+    margin-right: 0.2rem;
+    margin-bottom: 1.5rem;
 }
 .reset-form{
     margin-inline: 0.2rem;
+    margin-left: 0.2rem;
+    margin-right: 0.2rem;
 }
 .menu input:hover{
     background-color: #aaaaaa;
@@ -213,6 +230,7 @@ audio{
     justify-content: center;
     align-items: center;
     margin-block-end: 1rem;
+    margin-bottom: 1rem;
 }
 .menuShow{
     transform: scale(100%);
@@ -368,6 +386,8 @@ audio{
 .svg-head{
     height: 5rem;
     margin-block: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
     display: none;
     fill:white;
 }
@@ -403,6 +423,8 @@ audio{
     /* width: 5rem;
     height: 5rem; */
     margin-block: 2rem 2rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 #explore-arrow:hover{
     width: 12rem;
@@ -462,6 +484,8 @@ audio{
     justify-content: center;
     align-items: center;
     margin-block: 0rem 0rem;
+    margin-top: 0rem;
+    margin-bottom: 0rem;
     height: 8rem;
     margin-top: 4rem;
     width: 20rem;
@@ -575,6 +599,8 @@ audio{
     justify-content: center;
     align-items: center;
     margin-block: 0.5rem 1rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
     cursor: pointer;
 }
 .list-song-title{
@@ -619,6 +645,8 @@ audio{
     flex-wrap: nowrap;
     position: fixed;
     padding-block: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
     transition: all 0.3s ease-in;
     transform: translateY(120%);
     bottom: 1rem;
@@ -635,6 +663,8 @@ audio{
 .panel-back{
     position: fixed;
     padding-block: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
     border-radius: 1rem 1rem 1rem 1rem;
     bottom: 1rem;
     /* margin: -1rem; */
@@ -663,6 +693,7 @@ audio{
     margin: 1.5rem;
     z-index: 6;
     margin-inline-start: 1.3rem;
+    margin-left: 1.3rem;
     background-color: #2e2e2e;    
     background-position:center;
     background-size: 5.7rem;
@@ -713,6 +744,7 @@ audio{
     right: 0;
     margin: 1rem;
     margin-inline-end: 4rem;
+    margin-right: 4rem;
 }
 .next,.prev,.play{
     width: 1.2rem;
@@ -720,9 +752,11 @@ audio{
 }
 .prev{
     margin-inline-start: -0.2rem;
+    margin-left: -0.2rem;
 }
 .next{
     margin-inline-end: -0.2rem;
+    margin-right: -0.2rem;
 }
 .next-song,.prev-song,.play-song{
     height: 2.5rem;
@@ -783,7 +817,9 @@ audio{
     outline: none;
     height: 8rem;
     margin-inline-start: 0rem;
+    margin-left: 0rem;
     margin-block-start: 1rem;
+    margin-top: 1rem;
     /* padding-block-start: 8.1rem; */
     background-size: 110vw;
     background-position: center;
@@ -890,6 +926,7 @@ audio{
 }
 .close-arrow{
     margin-block-start: 0.2rem;
+    margin-top: 0.2rem;
 }
 .close-arrow path{
     /* fill:aqua; */
@@ -932,6 +969,7 @@ audio{
 .full-screen-info{
     display: flex;
     margin-block-start: 2rem;
+    margin-top: 2rem;
     transition: all 0.3s cubic-bezier(0, 0, 0.6, 1.02);
     flex-direction: column;
     align-items: center;
@@ -950,6 +988,7 @@ audio{
 }
 .full-screen-controls{
     margin-block-start: 2rem;
+    margin-top: 2rem;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -964,6 +1003,7 @@ audio{
 }
 .loop-song{
     margin-inline-start: -0.2rem;
+    margin-left: -0.2rem;
 }
 .next-song-full::before,.mute-song-full::before,.loop-song-full::before,.prev-song-full::before{
     position: absolute;
@@ -1001,6 +1041,8 @@ audio{
     cursor: pointer;
     border-radius: 50%;
     margin-inline:0.5rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
     background-color: #d9d9d9;
     display: flex;
     align-content: center;
@@ -1025,6 +1067,7 @@ audio{
 }
 .seek-bar{
     margin-block-start: 2rem;
+    margin-top: 2rem;
     display: flex;
     align-content: center;
     justify-content: center;
@@ -1035,6 +1078,8 @@ audio{
     width: 2rem;
     height: 2rem;
     margin-inline: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
     cursor: pointer;
     transition: all 0.5s ease-in-out;
 }
@@ -1141,7 +1186,11 @@ input[type="range"]::-ms-fill-upper {
     border: none;
     font-size: 1rem;
     margin-block: -2rem 1rem;
+    margin-top: -2rem;
+    margin-bottom: 1rem;
     margin-inline: 0.5rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
     width: 35rem;
     font-family: Poppins;
     border-radius: 0.3rem;
@@ -1173,6 +1222,8 @@ input[type="range"]::-ms-fill-upper {
 @media screen and (pointer:coarse) and (orientation: portrait) {
     .title{
         margin-block: 4rem;
+        margin-top: 4rem;
+        margin-bottom: 4rem;
         font-size:7rem;
         line-height: 8rem;
         /* background-color: red; */
@@ -1195,17 +1246,23 @@ input[type="range"]::-ms-fill-upper {
         width: 4rem;
         height: 4rem;
         padding-block: 3.5rem;
+        padding-top: 3.5rem;
+        padding-bottom: 3.5rem;
         margin-top: -12rem;
     }
     .menu{
         padding-inline: 3rem;
+        padding-left: 3rem;
+        padding-right: 3rem;
     }
     .menu .setting{
         margin-block-start: 3rem;
+        margin-top: 3rem;
         font-size: 3rem;
     }
     .input-line{
         margin-block-start: 1rem;
+        margin-top: 1rem;
     }
     .menu label{
         font-size: 2.5rem;
@@ -1214,7 +1271,11 @@ input[type="range"]::-ms-fill-upper {
     .menu input{
         font-size: 1.8rem;
         padding-inline: 2rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
         padding-block: 1.5rem;
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
     }
     .menu p{
         font-size: 1.8rem;
@@ -1222,12 +1283,15 @@ input[type="range"]::-ms-fill-upper {
     .menu button{
         font-size: 1.8rem;
         padding-block: 1.5rem;
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
         /* padding-inline: 2rem; */
         /* transform: scale(1.2); */
         /* height: 6rem; */
     }
     .reset-button{
         margin-block-end: 3rem;
+        margin-bottom: 3rem;
     }
     /* .menu{ */
         /* display: flex;
@@ -1263,6 +1327,8 @@ input[type="range"]::-ms-fill-upper {
     #save{
         margin: 0;
         margin-block: 1rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
         /* margin-left: 8rem; */
     }
     .svg-title{
@@ -1275,6 +1341,7 @@ input[type="range"]::-ms-fill-upper {
         font-size: 5rem;
         height: 10rem;
         margin-block-start: 0rem;
+        margin-bottom: 0rem;
     }
     .padding{
         padding-bottom:  20rem;
@@ -1337,6 +1404,8 @@ input[type="range"]::-ms-fill-upper {
     }
     .list-title{
         margin-block: 1rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
         font-size: 3rem;
     }
     .song-info{
@@ -1388,10 +1457,16 @@ input[type="range"]::-ms-fill-upper {
         margin: 0 auto;
         transition: all 0.3s ease-in;
         padding-block: 1rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
         margin-inline: 1rem 0rem;
+        margin-left: 1rem;
+        margin-right: 0rem;
         bottom: 0rem;
         width: 98vw;
         padding-inline: 0.5rem;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
         /* flex-direction: row;  */
         height: 12rem;
         border-radius: 2rem;
@@ -1408,13 +1483,19 @@ input[type="range"]::-ms-fill-upper {
     .panel-back{
         position: fixed;
         padding-block: 1rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
         border-radius: 2rem;
         z-index: -5;
         filter: blur(30px);
         overflow: hidden;
         bottom: 0rem;
         margin-inline: 1rem 0rem;
+        margin-left: 1rem;
+        margin-right: 0rem;
         padding-inline: 0.5rem;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
         width: 98vw;
         height: 10rem;
         /* background-image: url(https://i.scdn.co/image/ab67616d0000b273459d675aa0b6f3b211357370); */
@@ -1430,7 +1511,10 @@ input[type="range"]::-ms-fill-upper {
         bottom:0rem;
         border-radius: 2rem;
         margin-inline: 1rem 0rem;
+        margin-left: 1rem;
+        margin-right: 0rem;
         margin-inline-start: -0.5rem;
+        margin-left: -0.5rem;
         height: 14rem;
     }
     #dur-panel::-webkit-slider-thumb {
@@ -1487,6 +1571,8 @@ input[type="range"]::-ms-fill-upper {
         width: 7rem;
         height: 7rem;
         margin-inline: 1rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
     }
     .play-song-full{
         width: 10rem;
@@ -1503,6 +1589,7 @@ input[type="range"]::-ms-fill-upper {
         width: 50rem;
         line-height: 6rem;
         margin-block-end: 2rem;
+        margin-bottom: 2rem;
     }
     .full-screen-current-info{
         font-size: 2rem;
@@ -1517,11 +1604,14 @@ input[type="range"]::-ms-fill-upper {
     }
     .seek-bar{
         margin-block-start: 4rem;
+        margin-top: 4rem;
     }
     .seek-forward,.seek-backward{
         width: 4rem;
         height: 4rem;
         margin-inline: 2rem;
+        margin-left: 2rem;
+        margin-right: 2rem;
     }
     input[type='range'] {
         width: 400px;
