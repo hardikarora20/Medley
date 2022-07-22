@@ -8,11 +8,10 @@ Medley
 <h3 align="center">Overview of Medley (User Interface)</h3>
 <br>
 <p float="center">
-  <img width="700" src="https://raw.githubusercontent.com/hardikkk20/Medley/master/images/1.webp">
-  <img width="295" src="https://raw.githubusercontent.com/hardikkk20/Medley/master/images/4.webp">
-
-  <img width="295" style="border-radius:100px" src="https://raw.githubusercontent.com/hardikkk20/Medley/master/images/5.webp">
-  <img width="700" src="https://raw.githubusercontent.com/hardikkk20/Medley/master/images/2.webp">
+  <img src="https://raw.githubusercontent.com/hardikkk20/Medley/master/images/1.webp">
+  <img width="49%" src="https://raw.githubusercontent.com/hardikkk20/Medley/master/images/4.webp">
+  <img width="49%" style="border-radius:100px" src="https://raw.githubusercontent.com/hardikkk20/Medley/master/images/5.webp">
+  <img src="https://raw.githubusercontent.com/hardikkk20/Medley/master/images/2.webp">
 </p>
 <h3 align="center">A lot of new features and fixes have been done in <a href="https://hardikkk20.github.io/Medley/">Latest Releases.</a>
 <br>The pictures attached above are of initial builds.</h3>
