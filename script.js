@@ -393,7 +393,9 @@ if(window.innerWidth<window.innerHeight){
     searchsong();
 }
 function searchsong(){
-    document.getElementsByClassName("song-search")[0].classList.toggle("searchShow");
+    if(window.innerWidth>innerHeight){
+        document.getElementsByClassName("song-search")[0].classList.toggle("searchShow");
+    }
     var songSearchId=document.getElementsByClassName("song-search")[0].style;
     var searchname=document.getElementById("song-search").value;
     if(window.innerWidth<window.innerHeight){
