@@ -194,8 +194,8 @@ audio{
     /* transform: scale(0.5); */
     opacity: 1;
     pointer-events: none;
-    transition: all 0.2s ease-in-out;
-    -moz-transition: all 0.2s ease-in-out;
+    transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
     align-content: center;
     flex-wrap: nowrap;
     justify-content: center;
@@ -416,32 +416,32 @@ audio{
 .svg-title path:nth-child(1){
     stroke-dasharray: 800.307373046875;
     stroke-dashoffset: 800.307373046875;
-    animation: title 2s ease forwards 1s;
+    animation: title 1s ease forwards 1s;
 }
 .svg-title path:nth-child(2){
     stroke-dasharray:  396.7845153808594;
     stroke-dashoffset: 396.7845153808594;
-    animation: title 2s ease forwards 1.3s; 
+    animation: title 1s ease forwards 1.3s; 
 }
 .svg-title path:nth-child(3){
     stroke-dasharray:  492.1542663574219;
     stroke-dashoffset: 492.1542663574219;
-    animation: title 2s ease forwards 1.6s;
+    animation: title 1s ease forwards 1.6s;
 }
 .svg-title path:nth-child(4){
     stroke-dasharray:  231.11904907226562;
     stroke-dashoffset: 231.11904907226562;
-    animation: title 2s ease forwards 1.9s;
+    animation: title 1s ease forwards 1.9s;
 }
 .svg-title path:nth-child(5){
     stroke-dasharray:  396.78460693359375;
     stroke-dashoffset: 396.78460693359375;
-    animation: title 2s ease forwards 2.2s;
+    animation: title 1s ease forwards 2.1s;
 }
 .svg-title path:nth-child(6){
     stroke-dasharray:  461.1785888671875;
     stroke-dashoffset: 461.1785888671875; 
-    animation: title 2s ease forwards 2.5s;
+    animation: title 1s ease forwards 2.5s;
 }
 .svg-title path:nth-child(8),.svg-title circle{
     opacity: 0;
@@ -473,7 +473,7 @@ audio{
 }
 #next-arrow,#explore-arrow{
     background-color: #D9D9D9;
-    animation: arrow 2s ease forwards 4s;
+    animation: arrow 1s ease forwards 4s;
     /* margin-block: 0rem; */
     font-size: 2rem;
     height: 4rem;
@@ -490,16 +490,16 @@ audio{
     flex-direction: row;
     opacity: 0;
     transform: translateY(20%);
-    transition: all 0.2s ease;
-    -moz-transition: all 0.2s ease;
+    transition: all 0.1s ease;
+    -moz-transition: all 0.1s ease;
     /* animation: arrow 1s ease forwards 10s; */
 }
 #next-arrow:hover,#explore-arrow:hover{
     width: 8rem;
     padding-right: 2rem;
     border-radius: 2rem;
-    transition: all 0.2s ease;
-    -moz-transition: all 0.2s ease;
+    transition: all 0.1s ease;
+    -moz-transition: all 0.1s ease;
 }
 #next-arrow:hover::before,#explore-arrow:hover::before{
     transition: all 0.3s ease;
@@ -513,8 +513,8 @@ audio{
     flex-direction: row;
     content: 'next';
     font-size: 1.4rem;
-    transition: all 0.2s ease;
-    -moz-transition: all 0.2s ease;
+    transition: all 0.1s ease;
+    -moz-transition: all 0.1s ease;
     height: 4rem;
     width: 10rem;
     border-radius: 2rem;
@@ -662,39 +662,39 @@ audio{
 }
 
 .title-logo{
-    /* animation: filllogo 2s ease -in forwards 3s; */
+    /* animation: filllogo 1s ease -in forwards 3s; */
     fill: transparent;
 }
 
 .title-logo path:nth-child(1){
     stroke-dasharray: 800.307373046875;
     stroke-dashoffset: 800.307373046875;
-    animation: title 2s ease forwards 1s;
+    animation: title 1s ease forwards 1s;
 }
 .title-logo path:nth-child(2){
     stroke-dasharray:  396.7845153808594;
     stroke-dashoffset: 396.7845153808594;
-    animation: title 2s ease forwards 1.3s; 
+    animation: title 1s ease forwards 1.3s; 
 }
 .title-logo path:nth-child(3){
     stroke-dasharray:  492.1542663574219;
     stroke-dashoffset: 492.1542663574219;
-    animation: title 2s ease forwards 1.6s;
+    animation: title 1s ease forwards 1.6s;
 }
 .title-logo path:nth-child(4){
     stroke-dasharray:  231.11904907226562;
     stroke-dashoffset: 231.11904907226562;
-    animation: title 2s ease forwards 1.9s;
+    animation: title 1s ease forwards 1.9s;
 }
 .title-logo path:nth-child(5){
     stroke-dasharray:  396.78460693359375;
     stroke-dashoffset: 396.78460693359375;
-    animation: title 2s ease forwards 2.2s;
+    animation: title 1s ease forwards 2.1s;
 }
 .title-logo path:nth-child(6){
     stroke-dasharray:  461.1785888671875;
     stroke-dashoffset: 461.1785888671875; 
-    animation: title 2s ease forwards 2.5s;
+    animation: title 1s ease forwards 2.5s;
 }
 .title-logo path:nth-child(8),.title-logo circle{
     opacity: 0;
@@ -742,8 +742,8 @@ audio{
     cursor: pointer;
     background-color: #2e2e2e;
     z-index: 10;
-    transition: all 0.2s ease-in-out;
-    -moz-transition: all 0.2s ease-in-out;
+    transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
     opacity: 0;
     /* background-image: url(https://i.scdn.co/image/ab67616d0000b273459d675aa0b6f3b211357370); */
     background-position:center;
@@ -941,8 +941,8 @@ audio{
     justify-content: center;
     align-items: center;
     margin: 0.5rem;
-    transition: all 0.2s ease-in;
-    -moz-transition: all 0.2s ease-in;
+    transition: all 0.1s ease-in;
+    -moz-transition: all 0.1s ease-in;
 }
 .next-song:hover,.prev-song:hover,.play-song:hover{
     background-color: #D9D9D9;
@@ -964,8 +964,8 @@ audio{
     color:black;
     opacity: 0;
     content: '';
-    transition: all 0.2s ease-in;
-    -moz-transition: all 0.2s ease-in;
+    transition: all 0.1s ease-in;
+    -moz-transition: all 0.1s ease-in;
 }
 .next-song::before{
     content:'+10s' ;
@@ -1102,8 +1102,8 @@ audio{
     align-items: center;
     border-radius: 50%;
     justify-content: center;
-    transition: all 0.2s ease-in;
-    -moz-transition: all 0.2s ease-in;
+    transition: all 0.1s ease-in;
+    -moz-transition: all 0.1s ease-in;
 }
 .close:hover{
     background-color: #D9D9D9;
@@ -1211,8 +1211,8 @@ audio{
     border-radius: 50%;
     opacity: 0;
     content: '';
-    transition: all 0.2s cubic-bezier(0.64, 0.57, 0.67, 1.53);
-    -moz-transition: all 0.2s cubic-bezier(0.64, 0.57, 0.67, 1.53);
+    transition: all 0.1s cubic-bezier(0.64, 0.57, 0.67, 1.53);
+    -moz-transition: all 0.1s cubic-bezier(0.64, 0.57, 0.67, 1.53);
 }
 .next-song-full::before{
     content:'NEXT' ;
@@ -1246,8 +1246,8 @@ audio{
     align-content: center;
     justify-content: center;
     align-items: center;
-    transition: all 0.2s cubic-bezier(0.64, 0.57, 0.67, 1.53);
-    -moz-transition: all 0.2s cubic-bezier(0.64, 0.57, 0.67, 1.53);
+    transition: all 0.1s cubic-bezier(0.64, 0.57, 0.67, 1.53);
+    -moz-transition: all 0.1s cubic-bezier(0.64, 0.57, 0.67, 1.53);
 }
 .prev-song-full:hover,.loop-song-full:hover,.play-song-full:hover,.next-song-full:hover{
     background-color: #D9D9D9;
@@ -1445,6 +1445,7 @@ input[type="range"]::-ms-fill-upper {
     body{
         transition: all 0.1s ease-out;
         -moz-transition: all 0.1s ease-out;
+        transition: all 0.1s ease-out;
     }
     .title{
         margin-block: 4rem;
@@ -1454,6 +1455,7 @@ input[type="range"]::-ms-fill-upper {
         line-height: 8rem;
         /* background-color: red; */
         width: 80vw;
+        transition: all 0.1s ease-out;
     }
     .title-back{
         /* width: 100%;
@@ -1467,6 +1469,7 @@ input[type="range"]::-ms-fill-upper {
         /* background-size: 150vw;
         opacity: 0.3;
         overflow-x: hidden; */
+        transition: all 0.1s ease-out;
     }
     .nav svg{
         width: 4rem;
@@ -1475,9 +1478,11 @@ input[type="range"]::-ms-fill-upper {
         padding-top: 3.5rem;
         padding-bottom: 3.5rem;
         margin-top: -12rem;
+        transition: all 0.1s ease-out;
     }
     .nav #search-icon{
         display: none;
+        transition: all 0.1s ease-out;
     }
     #song-search{
         width: 99%;
@@ -1491,27 +1496,33 @@ input[type="range"]::-ms-fill-upper {
         margin-bottom: 2rem;
         opacity: 1;
         pointer-events: all;
+        transition: all 0.1s ease-out;
     }
     #song-search:focus,#song-search:hover{
         height: 8rem;
         font-size: 2rem;
+        transition: all 0.1s ease-out;
     }
     .menu{
         padding-inline: 3rem;
         padding-left: 3rem;
         padding-right: 3rem;
+        transition: all 0.1s ease-out;
     }
     .menu .setting{
         margin-block-start: 3rem;
         margin-top: 3rem;
         font-size: 3rem;
+        transition: all 0.1s ease-out;
     }
     .input-line{
         margin-block-start: 1rem;
         margin-top: 1rem;
+        transition: all 0.1s ease-out;
     }
     .menu label{
         font-size: 2.5rem;
+        transition: all 0.1s ease-out;
     }
 
     .menu input{
@@ -1522,9 +1533,11 @@ input[type="range"]::-ms-fill-upper {
         padding-block: 1.5rem;
         padding-top: 1.5rem;
         padding-bottom: 1.5rem;
+        transition: all 0.1s ease-out;
     }
     .menu p{
         font-size: 1.8rem;
+        transition: all 0.1s ease-out;
     }
     .menu button{
         font-size: 1.8rem;
@@ -1534,6 +1547,7 @@ input[type="range"]::-ms-fill-upper {
         /* padding-inline: 2rem; */
         /* transform: scale(1.2); */
         /* height: 6rem; */
+        transition: all 0.1s ease-out;
     }
     .switch{
         transform: scale(2);
@@ -1541,6 +1555,7 @@ input[type="range"]::-ms-fill-upper {
         /* width: 8rem;
         height: 4rem;
         border-radius: 9rem; */
+        transition: all 0.1s ease-out;
     }
     /* #switch-toggle{
         width: 3rem;
@@ -1550,6 +1565,7 @@ input[type="range"]::-ms-fill-upper {
     .reset-button{
         margin-block-end: 3rem;
         margin-bottom: 3rem;
+        transition: all 0.1s ease-out;
     }
     /* .menu{ */
         /* display: flex;
@@ -1558,7 +1574,7 @@ input[type="range"]::-ms-fill-upper {
         justify-content: center;
         flex-wrap: nowrap;
         flex-direction: column;
-        transition: all 0.2s ease-in-out;
+        transition: all 0.1s ease-in-out;
         padding-block: -1rem;
     }
     .menuShow{
@@ -1587,14 +1603,17 @@ input[type="range"]::-ms-fill-upper {
         margin-block: 1rem;
         margin-top: 1rem;
         margin-bottom: 1rem;
+        transition: all 0.1s ease-out;
         /* margin-left: 8rem; */
     }
     #theme-button{
         margin-top: -1rem;
         margin-bottom: 2rem;
+        transition: all 0.1s ease-out;
     }
     .svg-title{
         transform: scale(1.5);
+        transition: all 0.1s ease-out;
     }
     #next-arrow,#explore-arrow,#next-arrow:hover,#explore-arrow:hover{
         width: 18rem;
@@ -1604,14 +1623,17 @@ input[type="range"]::-ms-fill-upper {
         height: 10rem;
         margin-block-start: 0rem;
         margin-bottom: 0rem;
+        transition: all 0.1s ease-out;
     }
     .padding{
         padding-bottom:  20rem;
+        transition: all 0.1s ease-out;
     }
     .flex-title p{
         margin-top: 4rem;
         font-size: 2rem;
         margin-bottom: 1rem;
+        transition: all 0.1s ease-out;
     }
     .gallery-image{
         /* aspect-ratio: 3 / 4; */
@@ -1623,6 +1645,7 @@ input[type="range"]::-ms-fill-upper {
         background-position: center;
         transition: all 1s ease;
         background-repeat: no-repeat;
+        transition: all 0.1s ease-out;
     }
     #explore-arrow,#explore-arrow:hover{
         animation: none;
@@ -1630,9 +1653,11 @@ input[type="range"]::-ms-fill-upper {
         width: 30rem;
         margin: 0;
         margin-bottom: 10rem;
+        transition: all 0.1s ease-out;
     }
     #explore-arrow:hover::before,#next-arrow:hover::before{
         font-size: 2.5rem;
+        transition: all 0.1s ease-out;
     }
     @keyframes arrow {
         to{
@@ -1646,29 +1671,36 @@ input[type="range"]::-ms-fill-upper {
         font-size: 2.5rem;
         padding-inline-end: 1rem;
         content: 'next';
+        transition: all 0.1s ease-out;
     }
     #explore-arrow::before{
         content: 'start exploring';
+        transition: all 0.1s ease-out;
     }
     .container{
         padding-bottom: 5rem;
+        transition: all 0.1s ease-out;
     }
     .list-song-image{
         width: 25rem;
         height: 25rem;
         background-size: 25.8rem;
+        transition: all 0.1s ease-out;
     }
     .list-song-image:hover{
         transform: scale(1);
+        transition: all 0.1s ease-out;
     }
     .list-song{
         padding-block-end: 2rem;
+        transition: all 0.1s ease-out;
     }
     .list-title{
         margin-block: 1rem;
         margin-top: 1rem;
         margin-bottom: 1rem;
         font-size: 3rem;
+        transition: all 0.1s ease-out;
     }
     .song-info{
         display: flex;
@@ -1676,35 +1708,42 @@ input[type="range"]::-ms-fill-upper {
         align-items: center;
         align-content: center;
         justify-content: center;
+        transition: all 0.1s ease-out;
     }
     .list-song-title{
         font-size: 2.5rem;
         width: 22rem;
+        transition: all 0.1s ease-out;
     }
     .list-song-title-info{
         width: 20rem;
         font-size: 2rem;
         text-align: center;
+        transition: all 0.1s ease-out;
         /* padding-inline-start: 4rem; */
     }
     .current-image{
         width: 10rem;
         height: 10rem;
         background-size: 10.2rem;
+        transition: all 0.1s ease-out;
     }
     .current-image::before{
         width: 10rem;
         height: 10rem;
         font-size: 5rem;
+        transition: all 0.1s ease-out;
     }
 
     .player-panel{
         height: 12rem;
+        transition: all 0.1s ease-out;
     }
     .current-name{
         font-size: 2.5rem;
         width: 22rem;
         overflow: scroll;
+        transition: all 0.1s ease-out;
     }
     .current-info{
         font-size: 1.8rem;
@@ -1712,6 +1751,7 @@ input[type="range"]::-ms-fill-upper {
         overflow: scroll;
         width: 22rem;
         text-overflow: ellipsis;
+        transition: all 0.1s ease-out;
     }
     .player-panel{
         display: flex;
@@ -1741,6 +1781,7 @@ input[type="range"]::-ms-fill-upper {
         align-content: center;
         justify-content: flex-start;
         flex-wrap: nowrap;
+        transition: all 0.1s ease-out;
     }
     .panel-back{
         position: fixed;
@@ -1765,6 +1806,7 @@ input[type="range"]::-ms-fill-upper {
         background-size: 110vw;
         background-position: 40%;
         opacity: 0.5;
+        transition: all 0.1s ease-out;
     }
     .player-panel{
         /* padding-block-end: 1rem; */
@@ -1779,9 +1821,11 @@ input[type="range"]::-ms-fill-upper {
         margin-inline-start: -0.5rem;
         margin-left: -0.5rem;
         height: 14rem;
+        transition: all 0.1s ease-out;
     }
     #dur-panel::-webkit-slider-thumb {
         box-shadow: -98vw 0 0 98vw #ffffff39;
+        transition: all 0.1s ease-out;
     }
     .media-controls{
         /* margin-inline-end: 2rem; */
@@ -1789,25 +1833,31 @@ input[type="range"]::-ms-fill-upper {
     .play,.next,.prev{
         width: 2.5rem;
         height: 2.5rem;
+        transition: all 0.1s ease-out;
     }
     .play-song,.prev-song,.next-song{
         width:5.5rem;
         height: 5.5rem;
+        transition: all 0.1s ease-out;
     }
     .next-song::before,.prev-song::before{
         font-size: 2rem;
+        transition: all 0.1s ease-out;
     }
     .play-song{
         width:7rem;
         height: 7rem;
+        transition: all 0.1s ease-out;
     }
     .full-prev,.loop-song,.full-play,.mute-song,.full-next{
         width: 5rem;
         height: 5rem;
+        transition: all 0.1s ease-out;
     }
     .play{
         width: 5rem;
         height: 5rem;
+        transition: all 0.1s ease-out;
     }
     .full-screen-player{
         width: 100vw;
@@ -1818,12 +1868,14 @@ input[type="range"]::-ms-fill-upper {
         background-size: 110vh;
         width: 100vw;
         height: 100vh;
+        transition: all 0.1s ease-out;
     }
     .full-screen-album{
         width: 45rem;
         height: 45rem;
         background-size: 45.5rem;
         margin-top: -5rem;
+        transition: all 0.1s ease-out;
     }
     .full-prev,.full-play,.full-next,.loop-song,.mute-song{
         width: 4rem;
@@ -1831,6 +1883,7 @@ input[type="range"]::-ms-fill-upper {
     }
     .loop-song,.mute-song{
         width: 3rem;
+        transition: all 0.1s ease-out;
     }
     .full-play{
         width: 6rem;

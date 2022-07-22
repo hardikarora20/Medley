@@ -4,17 +4,6 @@ var featured=10;
 var songIndex=10*7+featured;
 var maxNo=songIndex-1;
 var totalDiv=document.getElementsByTagName("div").length;
-function theme(){
-const darkThemeMq = window.matchMedia("(prefers-color-scheme: dark)");
-    if (darkThemeMq.matches) {
-  // default dark
-  console.log("dark");
-} 
-else {
-    themeswitch();
-    console.log("light");
-}
-}
 document.addEventListener("DOMContentLoaded", () => {
     welcome();
   });
@@ -30,14 +19,7 @@ else{window.onbeforeunload=function(){
     scrollTo(0,0);
 };
 }
-// function real(){
-//     for(var i=6,j=33,k=60;i<28,j<55,k<83;i=i+3,j=j+3,k=k+3){
-//         document.getElementsByTagName("div")[j].style.animationDelay=""+j+t+"ms";
-//         document.getElementsByTagName("div")[k].style.animationDelay=""+k+t+"ms";
-//         document.getElementsByTagName("div")[i].style.animationDelay=""+i+t+"ms";
-//     }
-// }
-// localStorage.clear();
+
 let haveIt = [];
 function generateUniqueRandom(maxNr) {
     //Generate random number
@@ -132,23 +114,11 @@ function setid(){
 function menu(){
     //important
     //console.log("menu() called");
-    // document.getElementsByClassName("menu-bar").style.display="flex";
-    // document.getElementById("menu-bar").style.display="flex";
     document.getElementById("setting-icon").style.transform="rotate(60deg)";
     document.getElementsByTagName("body")[0].classList.add("disable-scroll");
     document.getElementById("menu-bar").style.display="flex";
     document.getElementById("menu-bar").classList.toggle("menuShow");
     document.getElementById("menudark").classList.toggle("menu-dark-back");
-        // let text;
-        // let person = prompt("What should we call you?\n(Just to improve user experience)", "");
-        // if (person == null || person == "") {
-            
-        // } else {
-        //     var username=" "+person;
-        //     document.getElementById("greeting").innerText="Welcome";
-        //     document.getElementById("greeting").innerText+=username+",";
-        //     localStorage.setItem("username",person);
-        // }
 }
 
 function updatename(){
@@ -289,11 +259,17 @@ function themeswitch(){
         document.getElementById("song-search").style.color="black";
         document.getElementById("now-image").style.color="white";
         document.getElementById("switch-toggle").style.marginLeft="0.3rem"
+        for(var i=0;i<3;i++){
+            document.getElementsByTagName("meta")[i].content="#ffffff";
+        }
     }
     else{
         document.getElementById("now-image").style.color="black";
         document.getElementById("song-search").style.color="white";
         document.getElementById("switch-toggle").style.marginLeft="1.7rem"
+        for(var i=0;i<3;i++){
+            document.getElementsByTagName("meta")[i].content="#000000";
+        }
     }
 }
 function real(){
