@@ -381,6 +381,7 @@ function now_play(id){
     localStorage.setItem("last"+idNow+"",id); 
     idNow++;
     currentID=id;
+    checknext();
 }
 function updateVar(){
     currentname=document.getElementById("current").innerHTML;
@@ -572,6 +573,7 @@ function medias(){
       
 }
 
+function checknext(){
 setInterval(function () 
 {
     if(document.getElementById("loop-song-id").classList.contains("loop-on")){}
@@ -587,6 +589,7 @@ setInterval(function ()
         // console.log(audio.currentTime);
     }
 }, 1000);
+}
 
 function seekforward(){
     document.getElementsByTagName("audio")[0].currentTime += 10;

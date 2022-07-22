@@ -1930,6 +1930,9 @@ input[type="range"]::-ms-fill-upper {
         transform: translateX(-70%);
         background-color: #ffffff00;
     }
+    .close:hover{
+        background-color: transparent;
+    }
     .close-arrow{
         width: 6rem;
         height: 6rem;
