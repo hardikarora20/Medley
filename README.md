@@ -9,10 +9,10 @@ Medley
 <br>
 <p float="center">
   <img src="https://raw.githubusercontent.com/hardikkk20/Medley/master/images/1.webp">
-  <img width="49.5%" src="https://raw.githubusercontent.com/hardikkk20/Medley/master/images/4.webp">
-  <img width="49.5%" style="border-radius:100px" src="https://raw.githubusercontent.com/hardikkk20/Medley/master/images/5.webp">
+  <img width="48%" src="https://raw.githubusercontent.com/hardikkk20/Medley/master/images/4.webp">
+  <img width="48%" style="border-radius:100px" src="https://raw.githubusercontent.com/hardikkk20/Medley/master/images/5.webp">
   <img src="https://raw.githubusercontent.com/hardikkk20/Medley/master/images/2.webp">
 </p>
-<h3 align="center">A lot of new features and fixes have been done in <a href="https://hardikkk20.github.io/Medley/">Latest Releases.</a>
+<h3 align="center">A lot of new features and fixes have been done in <a href="https://hardikkk20.github.io/Medley/">Latest Release.</a>
 <br>The pictures attached above are of initial builds.</h3>
 <h2 align="center">Keep Medleying! 🎵</h2>
