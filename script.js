@@ -1,7 +1,20 @@
 
 var t=1;
-var maxNo=57;
-
+var featured=10;
+var songIndex=10*7+featured;
+var maxNo=songIndex-1;
+var totalDiv=document.getElementsByTagName("div").length;
+function theme(){
+const darkThemeMq = window.matchMedia("(prefers-color-scheme: dark)");
+    if (darkThemeMq.matches) {
+  // default dark
+  console.log("dark");
+} 
+else {
+    themeswitch();
+    console.log("light");
+}
+}
 document.addEventListener("DOMContentLoaded", () => {
     welcome();
   });
@@ -72,7 +85,7 @@ function local(){
 function recommend(){
     var k=1;
     var local=0
-    for(var i=50;i<150;i++){
+    for(var i=50;i<200;i++){
         if((document.getElementsByTagName("div")[i].innerHTML=='Recommended')){
             local=generateUniqueRandom(maxNo);
             document.getElementsByTagName("div")[i+1].innerText=data[local].singer;
@@ -108,7 +121,8 @@ function setid(){
     //important
     //console.log("setting id");
     var newid=0;
-    for(var i=0;i<458;i++){
+    totalDiv=document.getElementsByTagName("div").length;
+    for(var i=0;i<totalDiv;i++){
     if(document.getElementsByTagName("div")[i].innerText=='Song Name'){
         document.getElementsByTagName("div")[i-3].setAttribute("id",parseInt(newid));    
         newid++;
@@ -192,7 +206,7 @@ function getname(){
 
 function nextsong(){
     console.log("next");
-    if(currentID>43){
+    if(currentID>(maxNo-1)){
         now_play(currentID);
     }
     else{
@@ -253,6 +267,35 @@ function reset(){
         window.location.reload();
     }, 1000);
 }
+function themeswitch(){
+    document.getElementsByTagName("body")[0].classList.toggle("lightback");
+    document.getElementById("dur-panel").classList.toggle("lightinvert");
+    document.getElementsByClassName("media-controls")[0].classList.toggle("lightinvert");
+    document.getElementsByClassName("title-back")[0].classList.toggle("titlebackinvert");
+    document.getElementsByClassName("full-screen-cover-back")[0].classList.toggle("full-light");
+    document.getElementsByClassName("full-screen-player")[0].classList.toggle("full-back-switch");
+    document.getElementById("music-panel").classList.toggle("lightback");
+    document.getElementById("page").classList.toggle("lightback");
+    document.getElementsByClassName("close")[0].classList.toggle("lightinvert");
+    document.getElementsByClassName("full-screen-controls")[0].classList.toggle("lightinvert");
+    document.getElementsByClassName("title-logo")[0].classList.toggle("lightinvert");
+    document.getElementsByClassName("nav")[0].classList.toggle("lightinvert");
+    document.getElementById("seek-bar-id").classList.toggle("lightinvert");
+    document.getElementById("full-screen-info-id").classList.toggle("lightinvert");
+    document.getElementById("suggest-id").classList.toggle("lightinvert");
+    document.getElementsByClassName("menu")[0].classList.toggle("lightback");
+    document.getElementsByClassName("switch")[0].classList.toggle("lightinvert");
+    if(document.getElementById("suggest-id").classList.contains("lightinvert")){
+        document.getElementById("song-search").style.color="black";
+        document.getElementById("now-image").style.color="white";
+        document.getElementById("switch-toggle").style.marginLeft="0.3rem"
+    }
+    else{
+        document.getElementById("now-image").style.color="black";
+        document.getElementById("song-search").style.color="white";
+        document.getElementById("switch-toggle").style.marginLeft="1.7rem"
+    }
+}
 function real(){
     if(welcomedone==1){
     //important
@@ -266,16 +309,17 @@ function real(){
     setid();
     localcheck();
     recommend();
+    totalDiv=document.getElementsByTagName("div").length;
     for(var k=1;k<=8;k++){
     //important
     //console.log(localStorage.getItem("last"+k+""));
-    }
+    }    
     var index=0;
-    for(var i=0,j=2;i<458;i++,j=j+2){
+    for(var i=0,j=10;i<totalDiv;i++,j=j+1){
         document.getElementsByTagName("div")[i].style.animationDelay=""+j+t+"ms";
         // t=t-0
         .1;
-        if((document.getElementsByTagName("div")[i].innerText=='Song Name')&&(index<58)){
+        if((document.getElementsByTagName("div")[i].innerText=='Song Name')&&(index<songIndex)){
             document.getElementsByTagName("div")[i+1].innerText=data[index].singer;
             document.getElementsByTagName("div")[i].innerText=data[index].name;    
             document.getElementsByTagName("div")[i-2].style.backgroundImage='url('+data[index].image+')';
@@ -368,7 +412,86 @@ function updateVar(){
     //important
     //console.log("currentinfo");
 }
+if(window.innerWidth<window.innerHeight){
+    searchsong();
+}
+function searchsong(){
+    document.getElementsByClassName("song-search")[0].classList.toggle("searchShow");
+    var songSearchId=document.getElementsByClassName("song-search")[0].style;
+    var searchname=document.getElementById("song-search").value;
+    if(window.innerWidth<window.innerHeight){
 
+    }
+    else{
+    if(document.getElementsByClassName("song-search")[0].classList.contains("searchShow")){
+        songSearchId.height="5vh";
+        songSearchId.fontSize="1rem";
+        songSearchId.padding="2rem";
+        // songSearchId.display="table";
+        songSearchId.transform="scaleY(1)";
+        songSearchId.marginTop="0rem";
+        songSearchId.opacity="1";
+        songSearchId.pointerEvents="all";
+    }
+    else{
+        songSearchId.height="0vh";
+        songSearchId.fontSize="0rem";
+        songSearchId.padding="0rem";
+        // songSearchId.display="none";
+        songSearchId.transform="scaleY(0)";
+        songSearchId.marginTop="-3rem";
+        songSearchId.opacity="0";
+        songSearchId.pointerEvents="none";
+        if(searchname!=""){
+            if(localStorage.getItem("last1")!=null){
+                document.getElementsByClassName("list")[0].style.display="block";
+            }
+            document.getElementsByClassName("list")[2].style.display="block";
+            for(var j=9;j<MaxListTitle;j++){
+                document.getElementsByClassName("list-song")[j].style.display="block";
+            }     
+        }
+    }
+    console.log("toggle");
+    }
+    setInterval(function () 
+    {
+    var MaxListTitle=document.getElementsByClassName("list-song").length;
+    console.log(document.getElementById("song-search").value);
+    var searchname=document.getElementById("song-search").value;
+    searchname=searchname.toLowerCase();
+    // console.log(searchname);
+    // console.log(MaxListTitle);
+    
+    if(searchname==""){
+    //     if(localStorage.getItem("last1")!=null){
+    //     document.getElementsByClassName("list")[0].style.display="block";
+    // }
+    local();
+        document.getElementsByClassName("list")[2].style.display="block";
+        for(var j=9;j<MaxListTitle;j++){
+            document.getElementsByClassName("list-song")[j].style.display="block";
+        }     
+    }
+    else{
+        document.getElementsByClassName("list")[0].style.display="none";
+        document.getElementsByClassName("list")[2].style.display="none";
+    for(var i=20,j=9;j<MaxListTitle;i++,j++){
+        // if(document.getElementsByTagName("div")[i].innerText.indexOf(searchname) > -1){
+        //     document.getElementsByTagName("div")[i-3].style.backgroundColor="red";
+        // }
+        if(document.getElementsByClassName("list-song-title")[j].innerHTML.toLowerCase().search(searchname)>-1){
+            console.log("Class");
+            // document.getElementsByClassName("list-song")[j].style.backgroundColor="blue";
+        }
+        else{
+            document.getElementsByClassName("list-song")[j].style.display="none";
+        }
+    }
+}
+
+    },10);
+}
 // if ('mediaSession' in navigator) {
 //     // currentimage=document.getElementById("now-image").innerHTML;
 // //     audio.currentTime = details.seekTime;
@@ -412,11 +535,11 @@ function pageLeft2(){
     
 }
 function updatedstatus(){
-    var updated=localStorage.getItem("updatestatus");
+    var updated=localStorage.getItem("updatestatus1");
     console.log("in updated");
     if(updated==null){
-        alert("Medley has been updated to v1.3\n\nChange log:\n• Added next/prev buttons in full screen player\n• Position of +10s/-10s seek has been changed\n• Added autoplay next song after current song ends\n• Completely redesigned Settings UI\n• Updated UI colors of full screen player\n• Added next/prev option to notification panel\n• Performance and stability improvements\n\nEnjoy the new update! ✨");
-        localStorage.setItem("updatestatus",1);
+        alert("Medley has been updated to v1.4 beta\n\nChange log:\n• Redesigned full screen player for mobile devices\n• Added search bar (unstable)\n• Added more songs\n• Added new section\n• Added light mode\n• Updated UI colors for media player\n• Performance and stability improvements\n\nEnjoy the new update! ✨");
+        localStorage.setItem("updatestatus1",1);
     }   
 }
 
@@ -482,10 +605,10 @@ setInterval(function ()
             console.log("about to end");
             setTimeout(nextsong(), 1000);
         }
-        console.log((audio.duration > 0 && !audio.paused))
-        console.log(audio.duration);
-        console.log(document.getElementById("player").classList.contains("playing"));
-        console.log(audio.currentTime);
+        // console.log((audio.duration > 0 && !audio.paused))
+        // console.log(audio.duration);
+        // console.log(document.getElementById("player").classList.contains("playing"));
+        // console.log(audio.currentTime);
     }
 }, 1000);
 
