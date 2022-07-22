@@ -5,28 +5,197 @@ var data=[{
     "type"   : "featured" ,
     "link"   : "https://sdlhivkecdnems01.cdnsrv.jio.com/jiosaavn.cdn.jio.com/330/fb2f8508b7049912e482ee5ee2697f17_320.mp4" , 
     "image"  : "https://i.scdn.co/image/ab67616d0000b273318443aab3531a0558e79a4d" 
-},{
+},
+{
+    "name"   : "Until I Found You",
+    //"id"     : "1",
+    "singer" : "Stephen Sanchez" ,
+    "type"   : "featured" ,
+    "link"   : "https://sdlhivkecdnems06.cdnsrv.jio.com/jiosaavn.cdn.jio.com/000/428bc701b7b9718e6f543cb6b631f5c4_160.mp4" , 
+    "image"  : "https://i.scdn.co/image/ab67616d0000b2738792c3e96f8ab97a767c5d0c" 
+},
+{
+    "name"   : "Rise",
+    //"id"     : "1",
+    "singer" : "Jonas Blue, Jack & Jack" ,
+    "type"   : "featured" ,
+    "link"   : "https://snoidcdnems03.cdnsrv.jio.com/jiosaavn.cdn.jio.com/750/59f09989235a80e543369b11386cb6e6_160.mp4" , 
+    "image"  : "https://i.scdn.co/image/ab67616d0000b2735b6bcc59c3562a6f362344c6" 
+},
+{
     "name"   : "Lover (Remix)",
     //"id"     : "1",
     "singer" : "Taylor Swift, Shawn Mendes" ,
     "type"   : "featured" ,
     "link"   : "https://sklktecdnems05.cdnsrv.jio.com/jiosaavn.cdn.jio.com/219/bed6f6f73cc56ee7ca95db3f3a3081a3_320.mp4" , 
     "image"  : "https://i.scdn.co/image/ab67616d0000b27359457bdb1edb5c6417f3baa2" 
-},{
+},
+{
     "name"   : "La Vie En Rose",
     //"id"     : "1",
     "singer" : "Daniela Andrade" ,
     "type"   : "featured" ,
     "link"   : "https://sklktecdnems04.cdnsrv.jio.com/jiosaavn.cdn.jio.com/670/adb3380e5d79bf5f338f7510a8b1bec9_320.mp4" , 
     "image"  : "https://i.scdn.co/image/ab67616d0000b273062f859ffcba42823f00c6c0" 
-},{
+},
+{
+    "name"   : "Willow",
+    //"id"     : "1",
+    "singer" : "Taylor Swift" ,
+    "type"   : "popular" ,
+    "link"   : "https://sdlhivkecdnems04.cdnsrv.jio.com/jiosaavn.cdn.jio.com/675/0330684c945a7ac8a1191f12cac6d507_320.mp4" ,
+    "image"  : "https://i.scdn.co/image/ab67616d0000b27333b8541201f1ef38941024be" 
+},
+//     "name"   : "",
+//     //"id"     : "1",
+//     "singer" : "Taylor Swift" ,
+//     "type"   : "featured" ,
+//     "link"   : "" , 
+//     "image"  : "" 
+// },{
+//     "name"   : "",
+//     //"id"     : "1",
+//     "singer" : "Taylor Swift" ,
+//     "type"   : "featured" ,
+//     "link"   : "" , 
+//     "image"  : "" 
+// },{
+//     "name"   : "",
+//     //"id"     : "1",
+//     "singer" : "Taylor Swift" ,
+//     "type"   : "featured" ,
+//     "link"   : "" , 
+//     "image"  : "" 
+// },{
+{
+    "name"   : "Until I Found You (Em Beihold Version)",
+    //"id"     : "1",
+    "singer" : "Stephen Sanchez, Em Beihold" ,
+    "type"   : "featured" ,
+    "link"   : "https://sdlhivkcdnems04.cdnsrv.jio.com/jiosaavn.cdn.jio.com/585/bf324c5903bae15532f7da70a6953c78_160.mp4" , 
+    "image"  : "https://i.scdn.co/image/ab67616d0000b2732bf0876d42b90a8852ad6244" 
+},
+{
     "name"   : "Better Man (Taylor's Version)",
     //"id"     : "1",
     "singer" : "Taylor Swift" ,
     "type"   : "featured" ,
     "link"   : "https://sdlhivkecdnems01.cdnsrv.jio.com/jiosaavn.cdn.jio.com/330/fb2f8508b7049912e482ee5ee2697f17_320.mp4" , 
     "image"  : "https://i.scdn.co/image/ab67616d0000b273563151cc3a0528d8228998c8" 
+},
+{
+    "name"   : "Paper Rings",
+    //"id"     : "1",
+    "singer" : "Taylor Swift" ,
+    "type"   : "featured" ,
+    "link"   : "https://snoidcdnems07.cdnsrv.jio.com/jiosaavn.cdn.jio.com/228/d6a34647f8bc1201aee58b352f24ea13_320.mp4" , 
+    "image"  : "https://i.scdn.co/image/ab67616d0000b27359457bdb1edb5c6417f3baa2" 
+},
+{
+    "name"   : "Until I Found You (Piano Version)",
+    //"id"     : "1",
+    "singer" : "Stephen Sanchez" ,
+    "type"   : "featured" ,
+    "link"   : "https://snoidcdnems05.cdnsrv.jio.com/jiosaavn.cdn.jio.com/648/19e1a15096cf838408f25fb399253922_160.mp4" , 
+    "image"  : "https://i.scdn.co/image/ab67616d0000b273b2c4ddfc4d23c45ab16e57b9" 
+},
+{
+    //     "name"   : "",
+//     //"id"     : "1",
+//     "singer" : "Taylor Swift" ,
+//     "type"   : "featured" ,
+//     "link"   : "" , 
+//     "image"  : "" 
+// },{
+    "name"   : "Kesariya",
+    //"id"     : "1",
+    "singer" : "Pritam, Arijit Singh, Amitabh Bhattacharya" ,
+    "type"   : "trendbolly" ,
+    "link"   : "https://sdlhivkcdnems02.cdnsrv.jio.com/jiosaavn.cdn.jio.com/191/0c353932c6bb495fe0e6e885c42a7367_320.mp4" , 
+    "image"  : "https://i.scdn.co/image/ab67616d0000b273c08202c50371e234d20caf62" 
 },{
+    "name"   : "Kitni Haseen Hogi",
+    //"id"     : "1",
+    "singer" : "Mithoon, Arijit Singh, Sayeed Quadri" ,
+    "type"   : "trendbolly" ,
+    "link"   : "https://sdlhivkcdnems03.cdnsrv.jio.com/jiosaavn.cdn.jio.com/800/8eb2bd59cf48d8e450639ce80a2f01c1_320.mp4" , 
+    "image"  : "https://i.scdn.co/image/ab67616d0000b273719c602ac25334838c6bdd03" 
+},{
+    "name"   : "Galliyan Returns",
+    //"id"     : "1",
+    "singer" : "Ankit Tiwari" ,
+    "type"   : "trendbolly" ,
+    "link"   : "https://sdlhivkecdnems06.cdnsrv.jio.com/jiosaavn.cdn.jio.com/104/c88574d4d7dbb6164a6ae57133f6bcb8_320.mp4" , 
+    "image"  : "https://i.scdn.co/image/ab67616d0000b273b5cb29fed38ae4bc22baa515" 
+},{
+    "name"   : "Fitoor",
+    //"id"     : "1",
+    "singer" : "Arijit Singh, Neeti Mohan" ,
+    "type"   : "trendbolly" ,
+    "link"   : "https://snoidcdnems08.cdnsrv.jio.com/jiosaavn.cdn.jio.com/188/9b5b6384f2285c2b8b2822258a1a76e7_320.mp4" , 
+    "image"  : "https://i.scdn.co/image/ab67616d0000b273d5363fb37271699b514aa60b" 
+},{
+    "name"   : "Maiyya Mainu",
+    //"id"     : "1",
+    "singer" : "Sachet Tandon" ,
+    "type"   : "trendbolly" ,
+    "link"   : "https://sklktcdnems02.cdnsrv.jio.com/jiosaavn.cdn.jio.com/799/c7fcdb5d33731d6d044462b7e29970c9_320.mp4" , 
+    "image"  : "https://i.scdn.co/image/ab67616d0000b27399ed270d377da2ad5670e595" 
+},{
+    "name"   : "Mere Yaaraa",
+    //"id"     : "1",
+    "singer" : "Arijit Singh, Neeti Mohan" ,
+    "type"   : "trendbolly" ,
+    "link"   : "https://sklktecdnems02.cdnsrv.jio.com/jiosaavn.cdn.jio.com/415/6bb5d4da63abd8f3518a9e1ac455420f_320.mp4" , 
+    "image"  : "https://i.scdn.co/image/ab67616d0000b2733361905e288acb907f181f6a" 
+},{
+    "name"   : "Aashiqui Aa Gayi",
+    //"id"     : "1",
+    "singer" : "Arijit Singh" ,
+    "type"   : "trendbolly" ,
+    "link"   : "https://sklktcdnems01.cdnsrv.jio.com/jiosaavn.cdn.jio.com/323/37c1bdb1afaf4aef0d6b19dc29d56743_320.mp4" , 
+    "image"  : "https://c.saavncdn.com/323/Radhe-Shyam-Hindi-2022-20220312141049-500x500.jpg" 
+},{
+    "name"   : "Halki Si Barsaat",
+    //"id"     : "1",
+    "singer" : "Saaj Bhatt" ,
+    "type"   : "trendbolly" ,
+    "link"   : "https://sklktecdnems02.cdnsrv.jio.com/jiosaavn.cdn.jio.com/941/08a94b85bdd1d03c255d4d8e8a404153_320.mp4" , 
+    "image"  : "https://i.scdn.co/image/ab67616d0000b273ef9b5260622a196e00f4d6a1" 
+},
+{
+    "name"   : "Mehrama",
+    //"id"     : "1",
+    "singer" : "Pritam, Darshan Raval, Antara Mitra" ,
+    "type"   : "trendbolly" ,
+    "link"   : "https://snoidcdnems07.cdnsrv.jio.com/jiosaavn.cdn.jio.com/862/3a36773fb96a2f1232ba4463c6fb5a91_320.mp4" , 
+    "image"  : "https://i.scdn.co/image/ab67616d0000b273095191f6b96fd9eff585befc" 
+},
+{
+    "name"   : "Raataan Lambiyan",
+    //"id"     : "1",
+    "singer" : "Jubin Nautiyal, Asees Kaur" ,
+    "type"   : "trendbolly" ,
+    "link"   : "https://sklktcdnems06.cdnsrv.jio.com/jiosaavn.cdn.jio.com/238/35726d4394604604e961bf5b846870d0_160.mp4" , 
+    "image"  : "https://i.scdn.co/image/ab67616d0000b273ab827cdec4b3fc1b02bfdb1e" 
+},
+{
+    "name"   : "Bam Bam",
+    //"id"     : "1",
+    "singer" : "Camila Cabello ft. Ed Sheeran" ,
+    "type"   : "pop" ,
+    "link"   : "https://snoidcdnems03.cdnsrv.jio.com/jiosaavn.cdn.jio.com/396/76eb74bcc14d98a6f72b1ed519c77c3b_320.mp4" , 
+    "image"  : "https://i.scdn.co/image/ab67616d0000b273364ef5f9057092741f667fea" 
+},
+{
+    "name"   : "Woman",
+    "singer" : "Doja Cat" ,
+
+    "type"   : "pop" ,
+    "link"   : "https://snoidcdnems04.cdnsrv.jio.com/jiosaavn.cdn.jio.com/852/2bb7cca3ca3919aa0f07d8801bab80c6_320.mp4" ,
+    "image"  : "https://i.scdn.co/image/ab67616d0000b2734df3245f26298a1579ecc321" 
+},
+{
     "name"   : "Let Me Down Slowly",
     //"id"     : "1",
     "singer" : "Alec Benjamin" ,
@@ -93,13 +262,13 @@ var data=[{
     "image"  : "https://i.scdn.co/image/ab67616d0000b2735ef878a782c987d38d82b605" 
 },  
 {
-    "name"   : "Levitating",
-    //"id"     : "8",
-    "singer" : "Dua Lipa, Sean Paul" ,
-    "type"   : "pop" ,
-    "link"   : "https://sklktecdnems06.cdnsrv.jio.com/jiosaavn.cdn.jio.com/651/1961c02c707b866858ce1db3ce304d5c_320.mp4" ,
-    "image"  : "https://i.scdn.co/image/ab67616d0000b273bd26ede1ae69327010d49946" 
-},  
+    "name"   : "Sach Keh Raha Hai Deewana",
+    //"id"     : "6",
+    "singer" : "KK" ,
+    "type"   : "bolly" ,
+    "link"   : "https://sdlhivkecdnems04.cdnsrv.jio.com/jiosaavn.cdn.jio.com/724/b985f30ff093c948d4d38a4c75bef1ef_320.mp4" ,
+    "image"  : "https://i.scdn.co/image/ab67616d0000b273aedf6f748f73e59cf25bcf25" 
+},
 {
     "name"   : "Pee Loon",
     //"id"     : "1",
@@ -140,14 +309,6 @@ var data=[{
     "link"   : "https://snoidcdnems06.cdnsrv.jio.com/jiosaavn.cdn.jio.com/995/719fd938e749f26dc991a0e84454fafc_320.mp4" ,
     "image"  : "https://i.scdn.co/image/ab67616d0000b273dae669e0bc817fd2d2235fa6" 
 },
-// {
-//     "name"   : "Sach Keh Raha Hai Deewana",
-//     //"id"     : "6",
-//     "singer" : "KK" ,
-//     "type"   : "bolly" ,
-//     "link"   : "https://sdlhivkecdnems04.cdnsrv.jio.com/jiosaavn.cdn.jio.com/724/b985f30ff093c948d4d38a4c75bef1ef_320.mp4" ,
-//     "image"  : "https://i.scdn.co/image/ab67616d0000b273aedf6f748f73e59cf25bcf25" 
-// },
 {
     "name"   : "Mileya Mileya",
     //"id"     : "6",
@@ -213,6 +374,14 @@ var data=[{
     "image"  : "https://i.scdn.co/image/ab67616d0000b2739e2f95ae77cf436017ada9cb" 
 },
 {
+    "name"   : "Heat Waves",
+    //"id"     : "7",
+    "singer" : "Glass Animals" ,
+    "type"   : "popular" ,
+    "link"   : "https://sdlhivkecdnems01.cdnsrv.jio.com/jiosaavn.cdn.jio.com/764/285672aae2a1e3a4795184c8d34dbf04_320.mp4" ,
+    "image"  : "https://i.scdn.co/image/ab67616d0000b273712701c5e263efc8726b1464" 
+},
+{
     "name"   : "Running Up That Hill (A Deal With God)",
     //"id"     : "7",
     "singer" : "Kate Bush" ,
@@ -229,13 +398,13 @@ var data=[{
     "image"  : "https://i.scdn.co/image/ab67616d0000b273c9eb4c87e1d7f5353908b712" 
 },
 {
-    "name"   : "Willow",
-    //"id"     : "1",
-    "singer" : "Taylor Swift" ,
-    "type"   : "popular" ,
-    "link"   : "https://sdlhivkecdnems04.cdnsrv.jio.com/jiosaavn.cdn.jio.com/675/0330684c945a7ac8a1191f12cac6d507_320.mp4" ,
-    "image"  : "https://i.scdn.co/image/ab67616d0000b27333b8541201f1ef38941024be" 
-},
+    "name"   : "Levitating",
+    //"id"     : "8",
+    "singer" : "Dua Lipa, Sean Paul" ,
+    "type"   : "pop" ,
+    "link"   : "https://sklktecdnems06.cdnsrv.jio.com/jiosaavn.cdn.jio.com/651/1961c02c707b866858ce1db3ce304d5c_320.mp4" ,
+    "image"  : "https://i.scdn.co/image/ab67616d0000b273bd26ede1ae69327010d49946" 
+},  
 {
     "name"   : "We Don't Talk Anymore",
     //"id"     : "6",
@@ -259,8 +428,14 @@ var data=[{
     "type"   : "indie" ,
     "link"   : "https://sdlhivkecdnems04.cdnsrv.jio.com/jiosaavn.cdn.jio.com/733/473355e0c914b85e48820b54978ccc9e_320.mp4" ,
     "image"  : "https://i.scdn.co/image/ab67616d0000b273dde7939fb4a77cdd4a814249" 
-},
-{
+},{
+    "name"   : "Jhoom (R&B Mix)",
+    //"id"     : "1",
+    "singer" : "Ali Zafar" ,
+    "type"   : "trendbolly" ,
+    "link"   : "https://sklktcdnems07.cdnsrv.jio.com/jiosaavn.cdn.jio.com/158/ed98c057481148ccb9e695b1ca973a37_320.mp4" , 
+    "image"  : "https://i.scdn.co/image/ab67616d0000b2738e8a4ff404b4fd931a4c3152" 
+},{
     "name"   : "Rangi Saari",
     //"id"     : "2",
     "singer" : "Kavita Seth, Kanishk Seth" ,
@@ -325,12 +500,20 @@ var data=[{
     "image"  : "https://i.scdn.co/image/ab67616d0000b27346b1b675145743583384dc24" 
 },
 {
-    "name"   : "Darshana",
-    //"id"     : "1",
-    "singer" : "Hesham Abdul Wahab, Darshana Rajendran" ,
+    "name"   : "Pottu Thotta Pournami",
+    //"id"     : "7",
+    "singer" : "Hesham Abdul Wahab, Sachin Balu, Megha Josekutty" ,
     "type"   : "tolly" ,
-    "link"   : "https://snoidcdnems06.cdnsrv.jio.com/jiosaavn.cdn.jio.com/371/15a6b73ac92c980d8e3643b1bf18a933_320.mp4" ,
-    "image"  : "https://i.scdn.co/image/ab67616d0000b27380cdfb78965c63f318709811" 
+    "link"   : "https://snoidcdnems04.cdnsrv.jio.com/jiosaavn.cdn.jio.com/579/274ac1854ab81e20762ba69eefb001b4_320.mp4" ,
+    "image"  : "https://i.scdn.co/image/ab67616d0000b2739b8c8ab6e0a59493a5fa06c6" 
+},
+{
+    "name"   : "Pavizha Mazha",
+    //"id"     : "5",
+    "singer" : "KS Harisankar" ,
+    "type"   : "tolly" ,
+    "link"   : "https://snoidcdnems02.cdnsrv.jio.com/jiosaavn.cdn.jio.com/485/28d223dd762ff6dc232df2e2ed05e4a4_320.mp4" ,
+    "image"  : "https://i.scdn.co/image/ab67616d0000b27398f93b54d337716f370fde19" 
 },
 {
     "name"   : "Kannil Kannil",
@@ -349,20 +532,28 @@ var data=[{
     "image"  : "https://i.scdn.co/image/ab67616d0000b27370fff9e83c9ac021091c6ab0" 
 },
 {
-    "name"   : "Vennelave Vennelave",
-    //"id"     : "4",
-    "singer" : "Hariharan, Sadhana Sargam" ,
+    "name"   : "Kalaavathi",
+    //"id"     : "8",
+    "singer" : "Thaman S, Sid Sriram" ,
     "type"   : "tolly" ,
-    "link"   : "https://snoidcdnems02.cdnsrv.jio.com/jiosaavn.cdn.jio.com/485/28d223dd762ff6dc232df2e2ed05e4a4_320.mp4" ,
-    "image"  : "https://i.scdn.co/image/ab67616d0000b27384351604b643064b97982db5" 
+    "link"   : "https://sdlhivkcdnems05.cdnsrv.jio.com/jiosaavn.cdn.jio.com/250/d067c88312cbc32cc708e20ff55f4360_320.mp4" ,
+    "image"  : "https://i.scdn.co/image/ab67616d0000b273628c64b83f6ff72b9f472699" 
 },
 {
-    "name"   : "Pavizha Mazha",
-    //"id"     : "5",
-    "singer" : "KS Harisankar" ,
+    "name"   : "Darshana",
+    //"id"     : "1",
+    "singer" : "Hesham Abdul Wahab, Darshana Rajendran" ,
     "type"   : "tolly" ,
-    "link"   : "https://snoidcdnems02.cdnsrv.jio.com/jiosaavn.cdn.jio.com/485/28d223dd762ff6dc232df2e2ed05e4a4_320.mp4" ,
-    "image"  : "https://i.scdn.co/image/ab67616d0000b27398f93b54d337716f370fde19" 
+    "link"   : "https://snoidcdnems06.cdnsrv.jio.com/jiosaavn.cdn.jio.com/371/15a6b73ac92c980d8e3643b1bf18a933_320.mp4" ,
+    "image"  : "https://i.scdn.co/image/ab67616d0000b27380cdfb78965c63f318709811" 
+},
+{
+    "name"   : "Vaseegara",
+    //"id"     : "4",
+    "singer" : "Bombay Jayashri" ,
+    "type"   : "tolly" ,
+    "link"   : "https://sklktecdnems03.cdnsrv.jio.com/jiosaavn.cdn.jio.com/137/182bdea1f2bd14866ddcf4cce49674e2_160.mp4" ,
+    "image"  : "https://i.scdn.co/image/ab67616d0000b273c728ec74d6b16d88d8e158ef" 
 },
 {
     "name"   : "Minni Minni",
@@ -381,20 +572,12 @@ var data=[{
     "image"  : "https://i.scdn.co/image/ab67616d0000b273309f07efe994d37d93800c55" 
 },
 {
-    "name"   : "Pottu Thotta Pournami",
-    //"id"     : "7",
-    "singer" : "Hesham Abdul Wahab, Sachin Balu, Megha Josekutty" ,
+    "name"   : "Vennelave Vennelave",
+    //"id"     : "4",
+    "singer" : "Hariharan, Sadhana Sargam" ,
     "type"   : "tolly" ,
-    "link"   : "https://snoidcdnems04.cdnsrv.jio.com/jiosaavn.cdn.jio.com/579/274ac1854ab81e20762ba69eefb001b4_320.mp4" ,
-    "image"  : "https://i.scdn.co/image/ab67616d0000b2739b8c8ab6e0a59493a5fa06c6" 
-},
-{
-    "name"   : "Kalaavathi",
-    //"id"     : "8",
-    "singer" : "Thaman S, Sid Sriram" ,
-    "type"   : "tolly" ,
-    "link"   : "https://sdlhivkcdnems05.cdnsrv.jio.com/jiosaavn.cdn.jio.com/250/d067c88312cbc32cc708e20ff55f4360_320.mp4" ,
-    "image"  : "https://i.scdn.co/image/ab67616d0000b273628c64b83f6ff72b9f472699" 
+    "link"   : "https://snoidcdnems02.cdnsrv.jio.com/jiosaavn.cdn.jio.com/485/28d223dd762ff6dc232df2e2ed05e4a4_320.mp4" ,
+    "image"  : "https://i.scdn.co/image/ab67616d0000b27384351604b643064b97982db5" 
 },
 {
     "name"   : "Fair Trade",
@@ -467,6 +650,14 @@ var data=[{
     "type"   : "rap" ,
     "link"   : "https://sdlhivkcdnems03.cdnsrv.jio.com/jiosaavn.cdn.jio.com/247/574881a2703a24682d53ab1e83d7f99d_320.mp4" ,
     "image"  : "https://i.scdn.co/image/ab67616d0000b273f52f6a4706fea3bde44467c3" 
+},
+{
+    "name"   : "Right On",
+    //"id"     : "8",
+    "singer" : "LiL Baby" ,
+    "type"   : "rap" ,
+    "link"   : "https://sklktcdnems07.cdnsrv.jio.com/jiosaavn.cdn.jio.com/719/101710f40ac487086088ab0bee30fd27_160.mp4" ,
+    "image"  : "https://i.scdn.co/image/ab67616d0000b2736c6827c3fb94b95e5ff4a4aa" 
 },
 ];
 
