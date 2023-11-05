@@ -38,6 +38,11 @@ Welcome to Medley, a revolutionary music streaming web application that offers a
 3. **Discover New Music:** Let the smart recommendation system surprise you with random song suggestions on each visit.
 4. **Track Your Listening History:** Easily view and explore recently played songs for a personalized touch. JavaScript and DOM are extensively used for these features.
 
+<a href="#live-website"></a>
+## Live Website 🌐
+
+Explore Medley now on the live website: [Medley - Live](https://hardikarora20.github.io/Medley)
+
 <a href="#contribution"></a>
 ## Contributing 🤝
 
