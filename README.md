@@ -25,8 +25,8 @@ Welcome to Medley, a revolutionary music streaming web application that offers a
 
 <div align="center">
   <img src="https://raw.githubusercontent.com/hardikkk20/Medley/master/images/1.webp">
-  <img width="48%" src="https://raw.githubusercontent.com/hardikkk20/Medley/master/images/4.webp">
-  <img width="48%" src="https://raw.githubusercontent.com/hardikkk20/Medley/master/images/5.webp">
+  <img width="49%" src="https://raw.githubusercontent.com/hardikkk20/Medley/master/images/4.webp">
+  <img width="49%" src="https://raw.githubusercontent.com/hardikkk20/Medley/master/images/5.webp">
   <img src="https://raw.githubusercontent.com/hardikkk20/Medley/master/images/2.webp">
 </div>
 
